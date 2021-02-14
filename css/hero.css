@@ -1,0 +1,144 @@
+main {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+main .hero {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+}
+
+/* all division to hero */
+main .hero .know-us, .know-services {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+}
+
+/*
+*************** Know us 
+*/
+main .hero .know-us {
+    background-color: #FAFAFA;
+    position: relative;
+    width: 100%;
+    height: 45%;
+
+}
+
+/* Know us ========= CONTAINER */
+main .hero .know-us .know-us-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Know us ========= DIV PICTURE */
+main .hero .know-us .know-us-picture {
+    width: 50%;
+    height: 200px;
+    overflow: hidden;
+}
+
+main .hero .know-us .know-us-picture img {
+    width: 100%;
+    object-position: center;
+}
+
+/* Know us ========= DIV CONTENT */
+main .hero .know-us .know-us-content {
+    position: relative;
+    width: 50%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, .6);
+    /* border: 1px solid #E55606; */
+    padding: 2px;
+}
+
+main .hero .know-us .know-us-content h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+main .hero .know-us .know-us-content h2 span:first-child {
+    text-transform: uppercase;
+}
+main .hero .know-us .know-us-content h3 {
+    font-size: 1em;
+}
+main .hero .know-us .know-us-content p {
+    font-size: 1em;
+}
+
+/* Know us ========= DIV BUTTON TO VIEW PAGE  */
+main .hero .know-us .know-us-container .know-us-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    text-decoration: none;
+    
+}
+
+main .hero .know-us .know-us-container .know-us-btn:hover span {
+    color: #E55606;
+}
+
+main .hero .know-us .know-us-container .know-us-btn span {
+    font-size: 1em;
+    color: black;
+    padding-right: 5px;
+}
+
+main .hero .know-us .know-us-container .know-us-btn .know-us-btn_img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #E55606;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .hero .know-us .know-us-container .know-us-btn img{
+    width: 25px;
+}
+
+
+/*
+*************** Know services
+*/
+main .hero .know-services {
+    background-color: #FAFAFA;
+    height: 55%;
+}
+
+main .hero .know-services .know-services-container {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+main .hero .know-services .know-services-container .service {
+    width: 100%;
+    height: calc(100% / 3);
+    background-color:aquamarine;
+}
+
+
+
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1440px) {}
