@@ -22,7 +22,7 @@ header .navbar {
 /*
 ********************** logo 
 */
-header .navbar .logo {
+header .navbar .navbar-logo {
     width: 50px;
     height: 100%;
     margin-left: 25px;
@@ -30,7 +30,7 @@ header .navbar .logo {
     justify-content: center;
     align-items: center;
 }
-header .navbar .logo img {
+header .navbar .navbar-logo img {
     width: 40px;
 }
 
