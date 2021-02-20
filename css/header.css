@@ -133,6 +133,15 @@ header .navbar .navlinks {
 
 @media screen and (min-width: 768px) {
 
+    header {
+        height: 80px;
+    }
+    /*
+    ********************** NAVBAR 
+    */
+    header .navbar {
+        height: 80px;
+    }
     /* Tel fast  */
     header .navbar .telfast {
         display: flex;
