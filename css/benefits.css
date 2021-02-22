@@ -1,0 +1,313 @@
+main .benefits {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+main .benefits .disponibility {
+    width: 80%;
+    height: 200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .benefits .disponibility .content {
+    padding: 60px;
+    background-color: #555555;
+    color: #F4F4F4;
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
+    border-radius: 5px;
+}
+
+main .benefits .benefits-picture {
+    display: none;
+}
+
+main .benefits .container {
+    width: 100%;
+    padding: 10px;
+}
+
+/*
+**** box top content
+*/
+main .benefits .container .benefits-top {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .benefits .container .benefits-top h2 {
+    position: relative;
+    font-size: 1.5em;
+}
+
+main .benefits .container .benefits-top h2::after {
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: #E55606;
+}
+
+main .benefits .container .benefits-top p {
+    position: relative;
+    display: block;
+    font-size: 1em;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/*
+**** grid benefit container
+*/
+main .benefits .container .benefits-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+main .benefits .container .benefits-container .benefit-card {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    background-color: #f4f4f4;
+    box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
+    margin: 15px auto;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+main .benefits .container .benefits-container .benefit-card  h3 {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #E55606;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 5px 10px;
+    color: #f4f4f4;
+}
+
+main .benefits .container .benefits-container .benefit-card  ul {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    list-style: none;
+}
+
+main .benefits .container .benefits-container .benefit-card  li {
+    position: relative;
+}
+
+main .benefits .container .benefits-container .benefit-card  li::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -15px;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #E55606;
+}
+
+@media screen and (min-width: 768px) {
+    main .benefits .container {
+        padding: 30px;
+    }
+
+    /*
+    **** box top content
+    */
+    main .benefits .container .benefits-top h2::after {
+        width: 27%;
+    }
+
+    main .benefits .container .benefits-top p {
+        width: 60%;
+    }
+
+    /*
+    **** grid benefit container
+    */
+    main .benefits .container .benefits-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    main .benefits .container .benefits-container .benefit-card {
+        position: relative;
+        width: calc(100% / 2.5);
+        margin-bottom: 40px;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {
+    main .benefits .skewtop {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 70%;
+        height: 50%;
+        background-image: url('../images/benefits/skewbenefit.svg');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 65%;
+    }
+
+    main .benefits .disponibility {
+        position: absolute;
+        top: -180px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    main .benefits .disponibility .content {
+        padding: 40px;
+    }
+
+    main .benefits .container {
+        padding-top: 80px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /*
+    **** box top content
+    */
+    main .benefits .container .benefits-top h2::after {
+        width: 23%;
+    }
+
+    main .benefits .container .benefits-top p {
+        width: 40%;
+    }
+
+    /*
+    **** grid benefit container
+    */
+    main .benefits .container .benefits-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    main .benefits .container .benefits-container .benefit-card {
+        position: relative;
+        width: calc(100% / 2.5);
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 1440px) {
+    main .benefits {
+        height: calc(100vh - 100px);
+        margin-top: 0;
+    }
+
+    main .benefits .disponibility {
+        position: absolute;
+        top: -100px;
+        left: 35%;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    main .benefits .benefits-picture {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 15%;
+        width: 550px;
+        height: 400px;
+        overflow: hidden;
+        box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
+        border-radius: 5px;
+    }
+
+    main .benefits .benefits-picture img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+    }
+
+    main .benefits .container {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /*
+    **** box top content
+    */
+    main .benefits .container .benefits-top {
+        position: relative;
+        width: 40%;
+        height: 350px;
+    }
+
+    main .benefits .container .benefits-top h2 {
+        font-size: 2em;
+    }
+
+    main .benefits .container .benefits-top h2::after {
+        top: 50px;
+    }
+
+    main .benefits .container .benefits-top p {
+        margin-top: 15px;
+        width: 70%;
+    }
+
+    /*
+    **** grid benefit container
+    */
+    main .benefits .container .benefits-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .benefits .container .benefits-container .benefit-card {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-color: #f4f4f4;
+        box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
+        margin: 15px;
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
