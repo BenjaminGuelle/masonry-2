@@ -9,37 +9,48 @@ body header {
     background-color: #F4F4F4;
 }
 
+header .nav {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    box-shadow: 1px 3px 5px 0px rgba(227, 227, 227 );
+    justify-content: space-between;
+    background-color: #F4F4F4;
+}
+
 /* LOGO */
-header .logo {
+header .nav .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header .logo img {
+header .nav .logo img {
     margin: 0 10px;
     width: 50px;
     height: 50px;
 }
 
-header .logo span {
+header .nav .logo span {
     font-size: 1em;
 }
 
 /* MENU BURGER */
-header .menu {
+header .nav .menu {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
 }
 
-header .menu span {
+header .nav .menu span {
     font-size: 1em;
     color: #C7C7C7;
 }
 
-header .menu .burger {
+header .nav .menu .burger {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -48,14 +59,14 @@ header .menu .burger {
     align-items: center;
 }
 
-header .menu .burger .burger-line {
+header .nav .menu .burger .burger-line {
     position: relative;
     width: 50%;
     height: 2px;
     background-color: #E55607;
 }
 
-header .menu .burger .burger-line::before {
+header .nav .menu .burger .burger-line::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -65,7 +76,7 @@ header .menu .burger .burger-line::before {
     background-color: #E55607;
 }
 
-header .menu .burger .burger-line::after {
+header .nav .menu .burger .burger-line::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -74,8 +85,25 @@ header .menu .burger .burger-line::after {
     left: 0;
     background-color: #E55607;
 }
+
+header .nav-mobile {
+    position: absolute;
+    z-index: 4;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: #E55607;
+    transition: top 0.5s ease-in-out;
+}
+
+header .nav-mobile.active {
+    top: 0;
+    transition: top 0.5s ease-in-out;
+}
+
 /* NAVBAR */
-header nav {
+header .nav nav {
     display: none;
 }
 
