@@ -1,331 +1,101 @@
 main .hero {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* BACKGROUND IMAGE HERO */
+main .hero .background-hero {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main .hero .background-hero img {
+    object-fit: cover;
+}
+
+/* container box hero */
+main .hero .hero-content {
     position: relative;
     z-index: 1;
     width: 100%;
-    height: auto;
-}
-
-/* CONTAINER HERO */
-main .hero .container {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/* *** BOXS INTO HERO */
-main .hero .container .hero-top {
-    width: 100%;
-}
-
-main .hero .container .hero-bot {
-    width: 100%;
-    margin-top: 40px;  
-}
-
-/*
-********* HERO TOP *********
-*/
-main .hero .container .hero-top .content {
-    width: 100%;
-}
-
-main .hero .container .hero-top .content h1 {
+main .hero .hero-content .hero-box {
     position: relative;
-    display: inline-block;
-    font-size: 1.5em;
+    width: 80%;
+    height: 50%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color:rgba(255,255,255,0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-main .hero .container .hero-top .content h1::after {
+main .hero .hero-content .hero-box h2 {
+    font-size: 1.3em;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+main .hero .hero-content .hero-box h2::after {
     position: absolute;
-    content: "";
-    top: 40px;
-    left: 0;
-    width: 100%;
+    content: '';
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
     height: 2px;
-    background-color: #E55606;
+    background-color: #E55607;
+    
 }
 
-main .hero .container .hero-top .content h2 {
-    font-size: 1em;
-    margin-top: 15px;
-}
-
-main .hero .container .hero-top .content .description {
+main .hero .hero-content .hero-box h3, .hero-text {
+    margin-top: 5px;
     font-size: 1em;
 }
 
-main .hero .container .hero-top .content a {
-    display:inline-block;
+main .hero .hero-content .hero-box .link-hero {
     text-decoration: none;
-    color: #FAFAFA;
-    background-color: #E55606;
-    padding: 15px 10px;
-    margin-top: 25px;
-    letter-spacing: 0.2em;
     font-size: 1em;
     font-weight: 700;
-    box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
+    background-color: #E55607;
+    color: #F4F4F4;
+    padding: 5px 10px;
     border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 1px 3px 5px 0px rgba(113, 113, 113 );
 }
 
-main .hero .container .hero-top .content a:hover {
-    color: #E55606;
-    background-color: #555555;
+main .hero .hero-content .hero-box .link-hero:hover {
+    background-color: #717171;
+    color: #E55607;
 }
-
-/* HERO TOP BOX IMAGE */
-main .hero .container .hero-top .picture {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-    margin-top: 40px;
-    box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
-    border-radius: 5px;
-}
-
-main .hero .container .hero-top .picture img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-}
-
-/*
-********* HERO BOT *********
-*/
-main .hero .container .hero-bot .logo-skills {
-    display: none;
-}
-
-main .hero .container .hero-bot .content {
-    width: 100%;
-}
-
-main .hero .container .hero-bot .content h2 {
-    position: relative;
-    display: inline-block;
-    font-size: 1.5em;
-}
-
-main .hero .container .hero-bot .content h2::after {
-    position: absolute;
-    content: "";
-    top: 75px;
-    left: 0;
-    width: 69%;
-    height: 2px;
-    background-color: #E55606;
-}
-
-main .hero .container .hero-bot .content h3 {
-    font-size: 1em;
-    margin-top: 15px;
-}
-
-main .hero .container .hero-bot .content .description {
-    font-size: 1em;
-}
-
-main .hero .container .hero-bot .content a {
-    display:inline-block;
-    text-decoration: none;
-    color: #FAFAFA;
-    background-color: #E55606;
-    padding: 15px 10px;
-    margin-top: 25px;
-    letter-spacing: 0.2em;
-    font-size: 1em;
-    font-weight: 700;
-    box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
-    border-radius: 5px;
-}
-
-main .hero .container .hero-bot .content a:hover {
-    color: #E55606;
-    background-color: #555555;
-}
-
-
-
 
 @media screen and (min-width: 768px) {
-    main .hero .container {
-        padding: 30px;
-    }
-
-    /* HERO TOP BOX IMAGE */
-    main .hero .container .hero-top .picture {
-        margin: 0 auto;
-        width: 80%;
-        height: 300px;
-        margin-top: 50px;
-    }
-
-    main .hero .container .hero-bot {
-        margin-top: 50px;  
-    }
-
-    main .hero .container .hero-bot .content h2::after {
-        top: 40px;
-        width: 100%;
+    main .hero .background-hero img {
+        height: 100%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-
-    main .hero {
-        height: calc(100vh - 100px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    /* BACKGROUND BOX IMAGE */
-    main .hero .skewbot {
-        position: absolute;
-        z-index: 0;
-        left: 0;
-        bottom: 0;
-        width: 70%;
-        height: 50%;
-        background-image: url('../images/hero/skewhero.svg');
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        background-size: 65%;
-    }
-
-    main .hero .container {
-        width: 80%;
-        height: 90%;
-        padding: 0;
-    }
-
-    /* *** BOXS INTO HERO */
-    main .hero .container .hero-top {
-        position: relative;
-        display: flex;
-        align-items: center;
-        height: 50%;
-    }
-
-    main .hero .container .hero-bot {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50%;
-    }
-
-    /*
-    ********* HERO TOP *********
-    */
-    main .hero .container .hero-top .content {
-        width: 50%;
-        padding-right: 80px;
-    }
-
-    /* HERO TOP BOX IMAGE */
-    main .hero .container .hero-top .picture {
-        width: 50%;
-        height: 350px;
-        margin-top: 0;
-    }
-
-    /*
-    ********* HERO BOT *********
-    */
-
-    /* block logo left */
-    main .hero .container .hero-bot .logo-skills {
-        display: flex;
-        width: 50%;
-        align-items: flex-end;
-    }
-
-    main .hero .container .hero-bot .logo-skills ul {
-    }
-
-    main .hero .container .hero-bot .logo-skills ul li {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    main .hero .container .hero-bot .logo-skills ul li span {
-        padding-left: 10px;
-        font-size: 1em;
-        font-weight: 700;
-    }
-
-    main .hero .container .hero-bot .logo-skills ul li .skill {
-        width: 50px;
-        height: 50px;
-        overflow: hidden;
-        background-color: #E55606;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 3px 3px 6px -1px rgba(85,85,85,0.49);
-    }
-
-    main .hero .container .hero-bot .logo-skills ul li .skill img {
-        width: 80%;
-    }
-
-    /* hero bot content right */
-    main .hero .container .hero-bot .content {
-        width: 50%;
+    main .hero .background-hero img {
+        width: 100%;
+        height: 100%;
     }
 }
 
-@media screen and (min-width: 1440px) {
-    /*
-    ********* HERO TOP *********
-    */
-    main .hero .container .hero-top .content {
-        padding-right: 200px;
-    }
-
-    main .hero .container .hero-top .content h1 {
-        font-size: 2em;
-    }
-
-    main .hero .container .hero-top .content h1::after {
-        top: 50px;
-    }
-
-    main .hero .container .hero-bot .content h2 {
-        font-size: 2em; 
-    }
-
-    main .hero .container .hero-bot .content h2::after {
-        top: 50px;
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    main .hero .container {
-        width: 80%;
-        height: 90%;
-        margin: 0;
-    }
-
-    main .hero .container .hero-top .content {
-        padding-right: 300px;
-    }
-
-    main .hero .container .hero-bot .logo-skills ul {
-        display: flex;
-    }
-
-    main .hero .container .hero-bot .logo-skills ul li {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0;
-        margin-right: 15px;
-    }
-}
+@media screen and (min-width: 1440px) {}

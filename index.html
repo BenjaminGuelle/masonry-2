@@ -1,230 +1,93 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masonry new theme</title>
+    <title>Masonry</title>
 
-    <!-- links to css files -->
+    <!-- Link font  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Links css  -->
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/hero.css">
-    <link rel="stylesheet" href="./css/benefits.css">
-    <link rel="stylesheet" href="./css/footer.css">
-
-    <!-- load fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/presentation.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <link rel="stylesheet" href="./css/contact.css">
 
 </head>
 <body>
-    <!-- header -->
+
     <header>
-        <nav class="navbar">
-            <!-- Logo -->
-            <div class="navbar-logo">
-                <img src="./images/navMob/logoSM.svg" alt="logo-stéphane-maçonnerie">
+        <div class="logo">
+            <img src="./assets/images/logologo.svg" alt="logo SARL Stéphane Michel">
+            <span>Stéphane MICHEL</span>
+        </div>
+        <div class="menu">
+            <span>Menu</span>
+            <div class="burger">
+                <div class="burger-line"></div>
             </div>
-            <div class="title-masonry">
-                <span class="name">Stéphane Michel</span>
-                <span>Artisan maçon</span>
-            </div>
-
-            <!-- nav links -->
-            <div class="navlinks">
-                <div class="link">
-                    <a href="#">Accueil</a>
-                </div>
-                <div class="link">
-                    <a href="#">Nos services</a>
-                </div>
-                <div class="link">
-                    <a href="#">Nous connaître</a>
-                </div>
-                <div class="link">
-                    <a href="#">Gallerie</a>
-                </div>
-                <div class="link">
-                    <a href="#">Contact</a>
-                </div>
-            </div>
-
-            <!-- number to tel -->
-            <div class="telfast">
-                <a href="tel:0641796665">
-                    <div class="telfast-img">
-                        <img src="./images/navMob/tel.png" alt="téléphone">
-                    </div>
-                    <span class="telfast-num">(+33)06 41 79 66 65</span>
-                </a>
-            </div>
-
-            <!-- btn menu mob -->
-            <button class="navbar-btn_menu">
-                Menu
-            </button>
-        </nav>
-
-        <!-- nav links down -->
-        <div class="navlinks-down">
-            <div class="link">
+        </div>
+        <nav>
+            <div>
                 <a href="#">Accueil</a>
-            </div>
-            <div class="link">
-                <a href="#">Nos services</a>
-            </div>
-            <div class="link">
-                <a href="#">Nous connaître</a>
-            </div>
-            <div class="link">
-                <a href="#">Gallerie</a>
-            </div>
-            <div class="link">
+                <a href="#">Prestations</a>
+                <a href="#">Nous découvrir</a>
+                <a href="#">Galerie</a>
                 <a href="#">Contact</a>
             </div>
-        </div>
-
-        <!-- bot menu mob -->
-        <div class="navbar-mobile">
-            <a href="#" class="items">
-                <img src="./images/navMob/home.png" alt="accueil">
-            </a>
-            <a href="#" class="items">
-                <img src="./images/navMob/letter.png" alt="contact">
-            </a>
-            <a href="tel:0641796665" class="items">
-                <img src="./images/navMob/tel.png" alt="tel">
-            </a>
-        </div>
+        </nav>
     </header>
 
-    <!-- main -->
     <main>
-        <!-- hero section -->
-        <section class="hero">
-            <div class="skewbot"></div>
-
-            <div class="container">
-                <div class="hero-top">
-                    <div class="content">
-                        <h1>SARL Stéphane Michel</h1>
-                        <h2>Artisan macon</h2>
-                        <div class="description">
-                            Depuis 1953, l'expérience et le savoir faire sont transmis de père en fils.
-                        </div>
-                        <a href="#">
-                            Découvrez nous
-                        </a>
+        <!-- section hero  -->
+        <section class="hero container">
+            <div class="background-hero">
+                <img src="./assets/images/backgroundhero.svg" alt="">
+            </div>
+            <div class="hero-content">
+                <div class="hero-top hero-box">
+                    <h2>SARL Stéphane Michel</h2>
+                    <h3>Artisan Maçon</h3>
+                    <div class="hero-text">
+                        Depuis 7 générations, l’expérience et le savoir faire sont transmis de père en fils.
                     </div>
-                    <div class="picture">
-                        <img src="./images/hero/steph.jpg" alt="photo stephane michel">
-                    </div>
+                    <a href="#" class="link-hero">
+                        Découvrez nous
+                    </a>
                 </div>
-                <div class="hero-bot">
-                    <div class="logo-skills">
-                        <ul>
-                            <li>
-                                <div class="skill">
-                                    <img src="./images/hero/brickwall.svg" alt="Construction">
-                                </div>
-                                <span>Construction</span>
-                            </li>
-                            <li>
-                                <div class="skill">
-                                    <img src="./images/hero/renovation.svg" alt="Rénovation">
-                                </div>
-                                <span>Rénovation</span>
-                            </li>
-                            <li>
-                                <div class="skill">
-                                    <img src="./images/hero/settings.svg" alt="Tous travaux">
-                                </div>
-                                <span>Tous travaux</span>
-                            </li>
-                        </ul>
+                <div class="hero-bot hero-box">
+                    <h2>Notre savoir faire, nos compétences</h2>
+                    <h3>Construction, rénovation, tous travaux</h3>
+                    <div class="hero-text">
+                        Proféssionnel du batiment, nous saurons vous accompagner pour vos projets.
                     </div>
-                    <div class="content">
-                        <h2>Notre savoir faire, nos compétences</h2>
-                        <h3>Construction, rénovation, tous travaux</h3>
-                        <div class="description">
-                            Proféssionnel du batiment, nous saurons vous accompagner pour vos projets.
-                        </div>
-                        <a href="#">
-                            Demandez un devis
-                        </a>
-                    </div>
+                    <a href="#" class="link-hero">
+                        Demandez un devis
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- benefits section -->
-        <section class="benefits">
-            <div class="skewtop"></div>
-            <div class="disponibility">
-                <div class="content">
-                    <p>Ouvert</p>
-                    <p>de 8h à 19h</p>
-                    <p>disponible 7J/7</p>
-                </div>
-            </div>
-            <div class="benefits-picture">
-                <img src="./images/benefits/photoCR2.jpg" alt="photo travaux">
-            </div>
+        <!-- section services  -->
+        <section class="services container"></section>
 
-            <div class="container">
-                <div class="benefits-top">
-                    <h2>Nos prestations</h2>
-                    <p>
-                        Grâce à notre expérience, nous sommes capable de donner vie à toutes vos idées de création.
-                    </p>
-                    <p>
-                        Que ce soit en construction d'une extension de votre maison, d'un éléments à rénover ou tout autres travaux de maçonnerie.
-                    </p>
-                </div>
+        <!-- section presentation  -->
+        <section class="presentation"></section>
 
-                <div class="benefits-container">
-                    <div class="benefit-card">
-                        <h3>Construction</h3>
-                        <ul>
-                            <li>Maçonnerie</li>
-                            <li>Béton armé</li>
-                            <li>Dallage</li>
-                            <li>Facade</li>
-                            <li>Piscine</li>
-                        </ul>
-                    </div>
+        <!-- section gallery  -->
+        <section class="gallery"></section>
 
-                    <div class="benefit-card">
-                        <h3>Rénovation</h3>
-                        <ul>
-                            <li>Maçonnerie</li>
-                            <li>Béton armé</li>
-                            <li>Dallage</li>
-                            <li>Facade</li>
-                            <li>Piscine</li>
-                        </ul>
-                    </div>
+        <!-- section contact  -->
+        <section class="contact"></section>
 
-                    <div class="benefit-card">
-                        <h3>Tous travaux</h3>
-                        <ul>
-                            <li>Maçonnerie</li>
-                            <li>Béton armé</li>
-                            <li>Dallage</li>
-                            <li>Facade</li>
-                            <li>Piscine</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <!-- footer -->
     <footer></footer>
-
-    <!-- load js file -->
-    <script src="./js/index.js"></script>
+    
 </body>
 </html>
