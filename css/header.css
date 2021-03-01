@@ -33,8 +33,13 @@ header .nav .logo img {
     height: 50px;
 }
 
-header .nav .logo span {
+header .nav .logo .logo-txt {
+    display: flex;
+}
+
+header .nav .logo .logo-txt span {
     font-size: 1em;
+    margin-right: 0.5em;
 }
 
 /* MENU BURGER */
@@ -43,6 +48,32 @@ header .nav .menu {
     justify-content: center;
     align-items: center;
     margin-right: 10px;
+}
+
+/* menu active */
+header .nav .menu.active .burger .burger-line {
+    background-color: black;
+}
+
+header .nav .menu.active .burger .burger-line::before {
+    background-color: black;
+}
+
+header .nav .menu.active .burger .burger-line::after {
+    background-color: black;
+}
+
+/* menu hover */
+header .nav .menu:hover .burger .burger-line {
+    background-color: black;
+}
+
+header .nav .menu:hover .burger .burger-line::before {
+    background-color: black;
+}
+
+header .nav .menu:hover .burger .burger-line::after {
+    background-color: black;
 }
 
 header .nav .menu span {
@@ -107,17 +138,90 @@ header .nav nav {
     display: none;
 }
 
+/* LINK CONTACT US */
+header .nav .contact-us {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 1024px) {
+    /* LOGO */
+    header .nav .logo .logo-txt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header .nav .logo .logo-txt span {
+        font-size: 1.5em;
+        margin-right: 0;
+        font-weight: 700;
+    }
+
     /* MENU BURGER */
-    header .menu {
+    header .nav .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    /* MENU BURGER */
+    header .nav .menu {
         display: none;
     }
 
     /* NAVBAR */
     header nav {
         display: inline-block;
+    }
+
+    body header {
+        height: 80px;
+    }
+
+    header .nav {
+        height: 80px;
+    }
+
+    /* NAVBAR */
+    header .nav nav {
+        display: inline-flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .nav nav a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: black;
+        font-size: 1em;
+    }
+
+    header .nav nav a:hover {
+        color: #E55607;
+    }
+
+    /* LINK CONTACT US */
+    header .nav .contact-us {
+        display: inline-flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        background-color: #E55607;
+        color: #F4F4F4;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    header .nav .contact-us:hover {
+        background-color: #717171;
+        color: #E55607;
     }
 
 }

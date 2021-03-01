@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/presentation.css">
     <link rel="stylesheet" href="./css/gallery.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
 
 </head>
 <body>
@@ -25,7 +26,10 @@
         <div class="nav">
             <div class="logo">
                 <img src="./assets/images/logologo.svg" alt="logo SARL Stéphane Michel">
-                <span>Stéphane MICHEL</span>
+                <div class="logo-txt">
+                    <span>Stéphane</span>
+                    <span>MICHEL</span>
+                </div>
             </div>
             <div class="menu">
                 <span>Menu</span>
@@ -34,14 +38,14 @@
                 </div>
             </div>
             <nav>
-                <div>
-                    <a href="#">Accueil</a>
-                    <a href="#">Prestations</a>
-                    <a href="#">Nous découvrir</a>
-                    <a href="#">Galerie</a>
-                    <a href="#">Contact</a>
-                </div>
+                <a href="#">Accueil</a>
+                <a href="#">Prestations</a>
+                <a href="#">Nous découvrir</a>
+                <a href="#">Galerie</a>
             </nav>
+            <a href="#" class="contact-us">
+                Contact
+            </a>
         </div>
         <div class="nav-mobile">
             <a href="#">Accueil</a>
@@ -83,10 +87,114 @@
         </section>
 
         <!-- section services  -->
-        <section class="services container"></section>
+        <section class="services container">
+            
+            <div class="services-content">
+                <div class="services-top">
+                    <h2>Nos prestations</h2>
+                    <div class="services-text">
+                        <span>
+                            Grâce à notre expérience, nous sommes capable de donner vie à toutes vos idées de création.
+                        </span>
+                        <span>
+                            Que ce soit en construction d'une extension de votre maison, d'un éléments à rénover ou tout autres travaux de maçonnerie.
+                        </span>
+                    </div>
+                    <a href="#" class="link-services">
+                        Découvrez no services
+                    </a>
+                </div>
+                <div class="services-bot">
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>Construction</h3>
+                            <div class="card-logo">
+                                <img src="./assets/images/logoCards/brickwall.svg" alt="logo Construction">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span>Maçconnerie</span>
+                            <span>Béton armé</span>
+                            <span>Dallage</span>
+                            <span>Façade</span>
+                            <span>Piscine</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>Rénovation</h3>
+                            <div class="card-logo">
+                                <img src="./assets/images/logoCards/renovation.svg" alt="logo Rénovation">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span>Maçconnerie</span>
+                            <span>Béton armé</span>
+                            <span>Dallage</span>
+                            <span>Façade</span>
+                            <span>Piscine</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <h3>Tous travaux</h3>
+                            <div class="card-logo">
+                                <img src="./assets/images/logoCards/settings.svg" alt="logo Tous travaux">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <span>Maçconnerie</span>
+                            <span>Béton armé</span>
+                            <span>Dallage</span>
+                            <span>Façade</span>
+                            <span>Piscine</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="./assets/images/bannerServices.svg" alt="image services">
+            </div>
+        </section>
 
         <!-- section presentation  -->
-        <section class="presentation"></section>
+        <section class="prez container">
+            <div class="prez-content">
+                <div class="prez-top">
+                    <img src="./assets/images/worker.jpg" alt="photo Stéphane Michel">
+                </div>
+                <div class="prez-bot">
+                    <div class="box-number">
+                        <div class="box">
+                            <span>30</span>
+                            <span>Années d'expérience</span>
+                        </div>
+                        <div class="box">
+                            <span>168</span>
+                            <span>Projets réalisés</span>
+                        </div>
+                        <div class="box">
+                            <span>79</span>
+                            <span>Clients</span>
+                        </div>
+                    </div>
+                    <div class="prez-description">
+                        <h2>SARL Stéphane Michel</h2>
+                        <h3>Plus de 30 ans d'expérience</h3>
+                        <div class="prez-txt">
+                            <span>
+                                Notre équipe de professionnel du bâtiment intervient chez les particuliers et les professionnels afin d'étudier leurs projets et de les réaliser.
+                            </span>
+                            <span>
+                                Toute l'expérience et le savoir faire de notre équipe est mis à disposition des projets les plus complexes et techniques.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- section gallery  -->
         <section class="gallery"></section>
