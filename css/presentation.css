@@ -221,7 +221,7 @@ main .prez .prez-content .prez-bot .prez-description .link-prez:hover {
 }
 
 /* SCREEN DESKTOP 1024 */
-@media screen and (min-width: 1024px) and (max-height: 1000px) {
+@media screen and (min-width: 1024px) and (max-height: 1100px) {
     main .prez {
         height: 100vh;
     }
