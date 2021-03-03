@@ -143,9 +143,72 @@ header .nav .contact-us {
     display: none;
 }
 
+/* PHONE FASTER */
+header .phonefaster {
+    position: absolute;
+    bottom: -675px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid #E55607;
+    background-color: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .phonefaster img {
+    width: 30px;
+    height: 30px;
+    z-index: 5;
+}
+
+
+/* view UP */
+header .up {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {}
 
 @media screen and (min-width: 1024px) {
+    /* PHONE FASTER */
+    header .phonefaster {
+        display: none;    
+    }
+    
+    /* view UP */
+    header .up {
+        position: absolute;
+        bottom: -675px;
+        right: 10px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #E55607;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header .up img {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        z-index: 5;
+        animation: up 2s 0s infinite ease-in;
+    }
+
+    @keyframes up {
+        0% { top: 25px; }
+        50% { top: 10px; }
+        100% { top: 0px; }
+    }
+
     /* LOGO */
     header .nav .logo .logo-txt {
         display: flex;

@@ -54,11 +54,17 @@
             <a href="#">Galerie</a>
             <a href="#">Contact</a>
         </div>
+        <a href="tel:0641796665" class="phonefaster">
+            <img src="./assets/images/logoContact/tel.png" alt="phone">
+        </a>
+        <a href="http://localhost/masonry-2#hero" class="up">
+            <img src="./assets/images/up-arrow.svg" alt="up">
+        </a>
     </header>
 
     <main>
         <!-- section hero  -->
-        <section class="hero container">
+        <section id="hero" class="hero container">
             <div class="background-hero">
                 <img src="./assets/images/backgroundhero.svg" alt="">
             </div>
@@ -308,7 +314,7 @@
         <div class="container">
             <div class="society content">
                 <h3>
-                    <img src="./assets/images/logoFooter/pin.svg" alt="">
+                    <img src="./assets/images/logoFooter/pin.svg" alt="logo-sarl">
                     <span>SARL Stéphane Michel</span>
                 </h3>
                 <span>stephane.michel@gmail.com</span>
@@ -317,7 +323,7 @@
             </div>
             <div class="horraire content">
                 <h3>
-                    <img src="./assets/images/logoFooter/time-left.svg" alt="">
+                    <img src="./assets/images/logoFooter/time-left.svg" alt="logo-horraires">
                     <span>Horraires d'ouverture</span>
                 </h3>
                 <span>Lun-Ven 08h-12h / 13h-17h</span>
@@ -325,7 +331,7 @@
             </div>
             <div class="know-more content">
                 <h3>
-                    <img src="./assets/images/logoFooter/information.svg" alt="">
+                    <img src="./assets/images/logoFooter/information.svg" alt="logo-infos">
                     <span>à propos</span>
                 </h3>
                 <span>Accueil</span>
@@ -335,7 +341,7 @@
             </div>
             <div class="follow-us content">
                 <h3>
-                    <img src="./assets/images/logoFooter/share.svg" alt="">
+                    <img src="./assets/images/logoFooter/share.svg" alt="logo-social">
                     <span>Suivez-nous</span>
                 </h3>
                 <span>
