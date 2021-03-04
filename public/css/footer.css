@@ -55,6 +55,37 @@ footer .container .society .mobile {
     color: #F4F4F4;
 }
 
+footer .container .know-more a {
+    text-decoration: none;
+    font-size: 1em;
+    color: #F4F4F4;
+    margin: 5px;
+}
+
+footer .container .know-more a:hover {
+    color: #E55607;
+}
+
+footer .follow-us .reseaux {
+    display: flex;
+    margin-top: 20px;
+}
+
+footer .follow-us .reseaux .reseau {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+footer .follow-us .reseaux .reseau img{
+    width: 40px;
+    height: 40px;
+}
+
 /* SCREEN TAB SMALL */
 @media screen and (min-width: 768px) {
     footer .container {
