@@ -12,18 +12,29 @@
 
      <!-- Links css  -->
     <link rel="stylesheet" href="private/assets/css/styles.css">
+    <link rel="stylesheet" href="private/assets/css/main.css">
 </head>
 <body>
-   <main>
+    <div class="container">
         <header>
-            <div class="container">
+            <div class="head-admin">
                 <h1>
-                    <span>AdminSys</span><br>
+                    <span>Back-Office</span><br>
                     <span>SARL Stéphane Michel</span>
                 </h1>
             </div>
             <nav>
-
+                <h2>
+                    <span>Gestion des éléments :</span>
+                </h2>
+                <a href="#">Accueil</a>
+                <a href="#">Galerie</a>
+                <a href="#">Slider</a>
+                <a href="#">Services</a>
+                <a href="#">Présentation</a>
             </nav>
         </header>
+        <main>
+
+    
   
