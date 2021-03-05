@@ -11,6 +11,7 @@ class ErrorController extends CoreController
      */
     public function error404() 
     {
-        dump('ERREUR');
+        //TODO
+        dump('404');
     }
 }
