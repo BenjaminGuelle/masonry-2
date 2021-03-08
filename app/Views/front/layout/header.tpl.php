@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 
     <!-- Links css  -->
-    <link rel="stylesheet" href="public/assets/css/styles.css">
-    <link rel="stylesheet" href="public/assets/css/header.css">
-    <link rel="stylesheet" href="public/assets/css/hero.css">
-    <link rel="stylesheet" href="public/assets/css/services.css">
-    <link rel="stylesheet" href="public/assets/css/presentation.css">
-    <link rel="stylesheet" href="public/assets/css/gallery.css">
-    <link rel="stylesheet" href="public/assets/css/contact.css">
-    <link rel="stylesheet" href="public/assets/css/footer.css">
+    <link rel="stylesheet" href="<?= getPublicCss('styles') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('header') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('hero') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('services') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('presentation') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('gallery') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
 
 </head>
 <body>

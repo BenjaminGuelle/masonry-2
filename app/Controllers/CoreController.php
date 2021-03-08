@@ -4,6 +4,17 @@ namespace App\Controllers;
 
 class CoreController
 {
+    public function __construct()
+    {
+        global $match;
+
+        $routeName = $match['name'];
+        $acl = [
+            "admin" => ['admin'],
+        ];
+
+    }
+
     protected function show( string $viewName, $viewVars = [] ) 
     {
         global $router;
@@ -35,5 +46,10 @@ class CoreController
         require_once __DIR__.'/../views/back/layout/headerA.tpl.php';
         include_once __DIR__.'/../views/back/'.$viewName.'.tpl.php';
         require_once __DIR__.'/../views/back/layout/footerA.tpl.php';
+    }
+
+    public function checkAuth( $_role = [] ) 
+    {
+        //TODO: implement
     }
 }

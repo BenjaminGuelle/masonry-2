@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
 
      <!-- Links css  -->
-    <link rel="stylesheet" href="private/assets/css/styles.css">
-    <link rel="stylesheet" href="private/assets/css/main.css">
+    <link rel="stylesheet" href="<?= getPrivateCss('styles') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('main') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('login') ?>">
 </head>
 <body>
     <div class="container">

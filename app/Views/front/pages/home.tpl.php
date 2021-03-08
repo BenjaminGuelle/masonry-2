@@ -1,5 +1,5 @@
       <!-- section hero  -->
-      <section id="hero" class="hero container">
+        <section id="hero" class="hero container">
             <div class="background-hero">
                 <img src="public/assets/images/backgroundhero.svg" alt="background">
             </div>
@@ -32,66 +32,64 @@
             
             <div class="services-content">
                 <div class="services-top">
-                    <h2>Nos prestations</h2>
-                    <div class="services-text">
-                        <span>
-                            Grâce à notre expérience, nous sommes capable de donner vie à toutes vos idées de création.
-                        </span>
-                        <span>
-                            Que ce soit en construction d'une extension de votre maison, d'un éléments à rénover ou tout autres travaux de maçonnerie.
-                        </span>
+                    <div class="top-container">
+                        <h2>
+                            <span>Nos prestations</span>
+                        </h2>
+                        <div class="services-txt">
+                            <span>
+                                Grâce à notre expérience et notre savoir faire, nous sommes capable de donner vie à toutes vos idées de création.
+                            </span><br>
+                            <span>
+                                Que ce soit en construction d'extension de votre maison, d'un éléments à rénover ou tout autres travaux de maçonnerie.
+                            </span>
+                        </div>
+                        <a href="<?= $router->generate('services') ?>" class="link-services">
+                            Découvrez nos services
+                        </a>
                     </div>
-                    <a href="<?= $router->generate('services') ?>" class="link-services">
-                        Découvrez no services
-                    </a>
                 </div>
                 <div class="services-bot">
-                    <div class="card">
-                        <div class="card-title">
-                            <h3>Construction</h3>
-                            <div class="card-logo">
-                                <img src="public/assets/images/logoCards/brickwall.svg" alt="logo Construction">
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <span>Maçconnerie</span>
-                            <span>Béton armé</span>
-                            <span>Dallage</span>
-                            <span>Façade</span>
-                            <span>Piscine</span>
-                        </div>
-                    </div>
+                    <div class="card-list">
 
-                    <div class="card">
-                        <div class="card-title">
-                            <h3>Rénovation</h3>
-                            <div class="card-logo">
-                                <img src="public/assets/images/logoCards/renovation.svg" alt="logo Rénovation">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="public/assets/images/construction.jpg" alt="services1">
+                            </div>
+                            <div class="card-title">
+                                <h3>Réalisation</h3>
+                                <div class="card-logo">
+                                    <img src="public/assets/images/logoCards/brickwall.svg" alt="logo Construction">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span>Maçconnerie</span>
+                                <span>Béton armé</span>
+                                <span>Dallage</span>
+                                <span>Façade</span>
+                                <span>Piscine</span>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <span>Maçconnerie</span>
-                            <span>Béton armé</span>
-                            <span>Dallage</span>
-                            <span>Façade</span>
-                            <span>Piscine</span>
-                        </div>
-                    </div>
 
-                    <div class="card">
-                        <div class="card-title">
-                            <h3>Tous travaux</h3>
-                            <div class="card-logo">
-                                <img src="public/assets/images/logoCards/settings.svg" alt="logo Tous travaux">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="public/assets/images/renovation.jpg" alt="services2">
+                            </div>
+                            <div class="card-title">
+                                <h3>Rénovation</h3>
+                                <div class="card-logo">
+                                    <img src="public/assets/images/logoCards/renovation.svg" alt="logo Construction">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <span>Maçconnerie</span>
+                                <span>Béton armé</span>
+                                <span>Dallage</span>
+                                <span>Façade</span>
+                                <span>Piscine</span>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <span>Maçconnerie</span>
-                            <span>Béton armé</span>
-                            <span>Dallage</span>
-                            <span>Façade</span>
-                            <span>Piscine</span>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -221,7 +219,7 @@
                             <div class="contact-link_logo">
                                 <img src="public/assets/images/logoContact/letter.png" alt="logo-mail">
                             </div>
-                            <span>stephane.michel@gmail.com</span>
+                            <span>sarl.michel.stephane@gmail.com</span>
                         </div>
                         <div class="link adress">
                             <div class="contact-link_logo">

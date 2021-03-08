@@ -48,7 +48,7 @@
     </footer>
     
     <!-- Js  -->
-    <script src="public/js/index.js"></script>
-    <script src="public/js/slideshow.js"></script>
+    <script src=" <?= getPublicJs('index') ?> "></script>
+    <script src=" <?= getPublicJs('slideshow') ?> "></script>
 </body>
 </html>
