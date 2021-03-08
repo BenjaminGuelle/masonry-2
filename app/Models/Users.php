@@ -34,7 +34,7 @@ class Users extends CoreModel
         $sql = "SELECT * FROM `". static::$table ."` WHERE `email` = ?";
 
         $statement = $pdo->prepare($sql);
-        $statement->execute($_email);
+        $statement->execute([$_email]);
 
         $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
 

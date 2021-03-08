@@ -15,18 +15,9 @@ class CoreController
 
     }
 
-    protected function getConfigVar( string $value ) {
-        if ( $this->getConfig()[$value] ) 
-        { 
-            return $this->getConfig()[$value];
-        }
-        return null;
-    }
-
-    public function echoTruc() {
-        echo 'truc';
-    }
-
+    //===============================
+    // Display views
+    //===============================
     protected function show( string $viewName, $viewVars = [] ) 
     {
         global $router;
@@ -60,15 +51,26 @@ class CoreController
         require_once __DIR__.'/../views/back/layout/footerA.tpl.php';
     }
 
+    // Verify authorization to acces views
     public function checkAuth( $_role = [] ) 
     {
         //TODO: implement
     }
 
+    // Set acces database
+    public static function getConfigVar() {
+        if ( self::getConfig() ) 
+        { 
+            dump(self::getConfig());
+            return self::getConfig();
+        }
+        return null;
+    }
+
     //===============================
     // Getters
     //===============================
-    private function getConfig() { return parse_ini_file(__DIR__.'/../config.ini'); }
+    private static function getConfig() { return parse_ini_file(__DIR__.'/../config.ini'); }
     
 
     //===============================

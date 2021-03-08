@@ -21,5 +21,5 @@ function getPublicJs( string $name ) {
 }
 
 function saltPepperStr( string $str ) {
-    $pass = 'salt'.$str.'pepper';
+    return 'salt'.$str.'pepper';
 }

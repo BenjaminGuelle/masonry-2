@@ -5,7 +5,7 @@
                 <span>Veuillez vous connecter</span>
             </h2>
         </div>
-        <form action="#" method="post" class="form">
+        <form action="<?= $router->generate('admin-loginPost') ?>" method="POST" class="form">
             <input type="email" id="email" name="email" placeholder="email">
             <input type="password" id="password" name="password" placeholder="mot de passe">
             <button type="submit">

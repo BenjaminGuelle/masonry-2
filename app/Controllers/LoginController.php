@@ -13,7 +13,7 @@ class LoginController extends CoreController
     public function logout() {}
 
     public function loginPost() {
-
+        dump($_POST['email']);
         $user = Users::findByEmail( $_POST['email'] );
 
         if ( $user === null )
@@ -21,11 +21,15 @@ class LoginController extends CoreController
             echo 'Identifiants incorrects';
         }
         else {
-            if( hash('sha256', $pass ) == $mdp )
+            if( hash('sha256', saltPepperStr($_POST['password']) ) == $user->getPassword() )
             {
                 dump('OK');
             }
-            else { dump('PAS OK'); }
+            else { 
+                dump(saltPepperStr($_POST['password']));
+                dump('PAS OK'); 
+            }
         }
     }
+    
 }

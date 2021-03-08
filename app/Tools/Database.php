@@ -12,13 +12,24 @@
         private static $maxTime = 10;
         private static $message;
         private static $_instance;
+
+        private $DB_HOST;
+        private $DB_NAME;
+        private $DB_USERNAME;
+        private $DB_PASSWORD;
+        
         private function __construct() {
+            foreach ( CoreController::getConfigVar() as $att_name => $att_value )
+            {
+                $this->{$att_name} = $att_value;
+            };
+
             // Récupération des données du fichier de config
             try {
                 $this->dbh = new \PDO(
-                    "mysql:host={$CoreController::getConfigVar('DB_HOST')};dbname={$CoreController::getConfigVar('DB_NAME')};charset=utf8",
-                    $CoreController::getConfigVar('DB_USERNAME'),
-                    $CoreController::getConfigVar('DB_PASSWORD'),
+                    "mysql:host={$this->getDB_HOST()};dbname={$this->getDB_NAME()};charset=utf8",
+                    $this->getDB_USERNAME(),
+                    $this->getDB_PASSWORD(),
                     array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_WARNING) // Affiche les erreurs SQL à l'écran
                 );
                 // self::message = 'Connexion database réussie';
@@ -64,5 +75,23 @@
                 else return false;
             }
         }
+
+        //===============================
+        // Getters
+        //===============================
+
+        public function getDB_HOST() { return $this->DB_HOST; }
+        public function getDB_NAME() { return $this->DB_NAME; }
+        public function getDB_USERNAME() { return $this->DB_USERNAME; }
+        public function getDB_PASSWORD() { return $this->DB_PASSWORD; }
+
+        //===============================
+        // Setters
+        //===============================
+
+        public function setDB_HOST( string $_DB_HOST ) { $this->DB_HOST = $_DB_HOST; }
+        public function setDB_NAME( string $_DB_NAME ) { $this->DB_NAME = $_DB_NAME; }
+        public function setDB_USERNAME( string $_DB_USERNAME  ) { $this->DB_USERNAME = $_DB_USERNAME; }
+        public function setDB_PASSWORD( string $_DB_PASSWORD ) { $this->DB_PASSWORD = $_DB_PASSWORD; }
 
     }

@@ -36,7 +36,7 @@ $router->map(
     'GET', '/Admin/login',  'LoginController::login',   'admin-login'
 );
 $router->map(
-    'POST', '/Admin/login',  'LoginController::loginPost',   'admin-loginPost'
+    'POST', '/Admin/login', 'LoginController::loginPost',   'admin-loginPost'
 );
 
 
