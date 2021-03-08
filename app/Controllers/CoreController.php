@@ -15,6 +15,18 @@ class CoreController
 
     }
 
+    protected function getConfigVar( string $value ) {
+        if ( $this->getConfig()[$value] ) 
+        { 
+            return $this->getConfig()[$value];
+        }
+        return null;
+    }
+
+    public function echoTruc() {
+        echo 'truc';
+    }
+
     protected function show( string $viewName, $viewVars = [] ) 
     {
         global $router;
@@ -52,4 +64,17 @@ class CoreController
     {
         //TODO: implement
     }
+
+    //===============================
+    // Getters
+    //===============================
+    private function getConfig() { return parse_ini_file(__DIR__.'/../config.ini'); }
+    
+
+    //===============================
+    // Setters
+    //===============================
+    
+
+
 }

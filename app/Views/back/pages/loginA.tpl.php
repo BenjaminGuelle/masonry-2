@@ -6,8 +6,8 @@
             </h2>
         </div>
         <form action="#" method="post" class="form">
-            <input type="text" placeholder="email">
-            <input type="text" placeholder="mot de passe">
+            <input type="email" id="email" name="email" placeholder="email">
+            <input type="password" id="password" name="password" placeholder="mot de passe">
             <button type="submit">
                 Valider
             </button>

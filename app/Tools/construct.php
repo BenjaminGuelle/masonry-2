@@ -19,3 +19,7 @@ function getPrivateJs( string $name ) {
 function getPublicJs( string $name ) {
     return getPath('/public/js/'.$name.'.js');
 }
+
+function saltPepperStr( string $str ) {
+    $pass = 'salt'.$str.'pepper';
+}

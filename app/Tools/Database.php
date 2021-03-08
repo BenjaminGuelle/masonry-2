@@ -2,40 +2,40 @@
 
     namespace App\Tools;    
 
+    use App\Controllers\CoreController;
+
     class Database 
     {
         private $dbh;
-        private $errorsDate = [];
-        private $errorsNumber = 5;
-        private $maxTime = 10;
-        private $message;
+        private static $errorsDate = [];
+        private static $errorsNumber = 5;
+        private static $maxTime = 10;
+        private static $message;
         private static $_instance;
         private function __construct() {
             // Récupération des données du fichier de config
-            $configData = parse_ini_file(__DIR__.'/../config.ini');
-            
             try {
                 $this->dbh = new \PDO(
-                    "mysql:host={$configData['DB_HOST']};dbname={$configData['DB_NAME']};charset=utf8",
-                    $configData['DB_USERNAME'],
-                    $configData['DB_PASSWORD'],
+                    "mysql:host={$CoreController::getConfigVar('DB_HOST')};dbname={$CoreController::getConfigVar('DB_NAME')};charset=utf8",
+                    $CoreController::getConfigVar('DB_USERNAME'),
+                    $CoreController::getConfigVar('DB_PASSWORD'),
                     array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_WARNING) // Affiche les erreurs SQL à l'écran
                 );
-                $this->message = 'Connexion database réussie';
+                // self::message = 'Connexion database réussie';
             }
             catch(\Exception $exception) {
-                $errorsDate.push(time());
+                self::errorsDate.push(time());
                 //2 : send log
-                $this->message = 'Erreur de connexion database';
+                // self::message = 'Erreur de connexion database';
                 exit;
             }
         }
         // the unique method you need to use
         public static function getPDO() {
-            if ($this->verifyErrors() === false)
-            {
-                return null;
-            }
+            // if (self::verifyErrors() === false)
+            // {
+            //     return null;
+            // }
             // If no instance => create one
             if (empty(self::$_instance)) {
                 self::$_instance = new \App\Tools\Database();
@@ -48,16 +48,16 @@
         }
 
         public function getConnexionStatus() {
-            return $this->message;
+            return self::message;
         }
 
-        public function verifyErrors() 
+        private static function verifyErrors() 
         {
-            if ($this->errorsDate.length < $this->errorsNumber) {
+            if (self::errorsDate.length < self::errorsNumber) {
                 return true;
             }
             else { 
-                if ( $this->errorsDate[$this->errorsDate.length - $this->errorsNumber ] + $this->maxTime < end($this->errorsDate) )
+                if ( self::errorsDate[self::errorsDate.length - self::errorsNumber ] + self::maxTime < end(self::errorsDate) )
                 {
                     return true;
                 }
