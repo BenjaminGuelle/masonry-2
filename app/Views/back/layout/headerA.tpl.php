@@ -25,6 +25,7 @@
                 </h1>
             </div>
             <nav>
+            <?php ?>
                 <h2>
                     <span>Gestion des éléments :</span>
                 </h2>

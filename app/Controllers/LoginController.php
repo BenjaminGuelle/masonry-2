@@ -7,6 +7,9 @@ use App\Models\Users;
 class LoginController extends CoreController
 {
     public function login() {
+        if ( isLoged() ) {
+            exit(redirectTo('admin'));
+        }
         $this->showAdmin( 'pages/loginA' );
     }
 
@@ -16,7 +19,7 @@ class LoginController extends CoreController
         unset( $_SESSION['userId'] );
         unset( $_SESSION['userObject'] );
 
-        header( "Location: " . $router->generate( 'admin-login' ) );
+        redirectTo('admin-login');
         exit();
     }
 
@@ -34,8 +37,8 @@ class LoginController extends CoreController
             {
                 $_SESSION['userId']     = $user->getId();
                 $_SESSION['userObject'] = $user;
-                redirectTo('admin');
-                exit();
+                
+                exit(redirectTo('admin'));
             }
             else { 
                 echo "Identifiants incorrects !";

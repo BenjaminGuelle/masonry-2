@@ -1,25 +1,24 @@
 <?php
 
-require __DIR__. '/vendor/autoload.php';
-require __DIR__. '/app/Tools/construct.php';
+require_once __DIR__. '/vendor/autoload.php';
+require_once __DIR__. '/app/Tools/construct.php';
+require_once __DIR__. '/app/Tools/log.php';
+
+initLogs(time());
 
 define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
 
 /*******************
  **** SESSION ******
 ********************/
-if(isset($_COOKIE['token_session']))
+if (isset( $_COOKIE['token_session']))
 {
-    session_name($_COOKIE['token_session']);
-    session_start();
+    session_start( [$_COOKIE['token_session']] );
 }
-else
-{
-    $token_session = encrypt(time(), 'sha256');
-    setcookie("token_session", $token_session, (time() + 24 * 3600 * 365));
-    session_name($token_session);
-    session_start();
-}
+else session_start();
+
+
+
 /*******************
  **** ROUTER *******
 ********************/

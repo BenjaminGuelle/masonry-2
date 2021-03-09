@@ -43,7 +43,9 @@ function redirectTo( string $path ) {
         if ( getType( $path) != 'string') {
             throw new Exception(`$path : is not a string`);
         }
-        else header("Location: ". $GLOBALS['router']->generate( $path ));
+        else {
+            header("Location: ". $GLOBALS['router']->generate( $path ));
+        }
     }
     catch(\RuntimeException $error) { 
         echo `$path : is not a match road`;
@@ -52,4 +54,12 @@ function redirectTo( string $path ) {
     catch(\Exception $error) { 
         return $error;
     }
+}
+
+function isLoged() {
+    if ( isset($_SESSION['userId']) )
+    {
+        return true;
+    }
+    else return false;
 }
