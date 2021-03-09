@@ -13,6 +13,12 @@ class CoreController
             "admin" => ['admin'],
         ];
 
+        // Verify protected road
+        if ( array_key_exists($routeName, $acl)) {
+
+            $authRoles = $acl[ $routeName ];
+        }
+
     }
 
     //===============================
@@ -60,8 +66,7 @@ class CoreController
     // Set acces database
     public static function getConfigVar() {
         if ( self::getConfig() ) 
-        { 
-            dump(self::getConfig());
+        {
             return self::getConfig();
         }
         return null;

@@ -5,8 +5,21 @@ require __DIR__. '/app/Tools/construct.php';
 
 define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
 
-session_start();
-// dump( $_SESSION );
+/*******************
+ **** SESSION ******
+********************/
+if(isset($_COOKIE['token_session']))
+{
+    session_name($_COOKIE['token_session']);
+    session_start();
+}
+else
+{
+    $token_session = encrypt(time(), 'sha256');
+    setcookie("token_session", $token_session, (time() + 24 * 3600 * 365));
+    session_name($token_session);
+    session_start();
+}
 /*******************
  **** ROUTER *******
 ********************/

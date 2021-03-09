@@ -10,10 +10,19 @@ class LoginController extends CoreController
         $this->showAdmin( 'pages/loginA' );
     }
 
-    public function logout() {}
+    public function logout() {
+        global $router;
+
+        unset( $_SESSION['userId'] );
+        unset( $_SESSION['userObject'] );
+
+        header( "Location: " . $router->generate( 'admin-login' ) );
+        exit();
+    }
 
     public function loginPost() {
-        dump($_POST['email']);
+        global $router;
+
         $user = Users::findByEmail( $_POST['email'] );
 
         if ( $user === null )
@@ -21,13 +30,15 @@ class LoginController extends CoreController
             echo 'Identifiants incorrects';
         }
         else {
-            if( hash('sha256', saltPepperStr($_POST['password']) ) == $user->getPassword() )
+            if( hash('sha256', saltPepperStr($_POST['password']) ) === $user->getPassword() )
             {
-                dump('OK');
+                $_SESSION['userId']     = $user->getId();
+                $_SESSION['userObject'] = $user;
+                redirectTo('admin');
+                exit();
             }
             else { 
-                dump(saltPepperStr($_POST['password']));
-                dump('PAS OK'); 
+                echo "Identifiants incorrects !";
             }
         }
     }

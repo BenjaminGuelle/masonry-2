@@ -50,7 +50,7 @@ class Users extends CoreModel
     //===============================
     // Getters
     //===============================
-
+    public function getId() { return $this->id; }
     public function getFirstName() { return $this->firstName; }
     public function getLastName() { return $this->lastName; }
     public function getEmail() { return $this->email; }
@@ -62,10 +62,10 @@ class Users extends CoreModel
     //===============================
     // Setters
     //===============================
-
-    public function setEmail( string $_email ) { $this->email = $_email; }
+    public function setId( string $_id ) { $this->id = $_id; }
     public function setFirstName( string $_name ) { $this->name = $_name; }
     public function setLastName( string $_name  ) { $this->name = $_name; }
+    public function setEmail( string $_email ) { $this->email = $_email; }
     public function setPassword( string $_password ) { $this->password = $_password; }
     public function setRole( string $_role ) { $this->role = $_role; }
     public function setUpdatedAt( string $_updatedAt ) { $this->updatedAt = $_updatedAt; }
