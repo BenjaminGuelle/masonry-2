@@ -33,25 +33,15 @@ class LoginController extends CoreController
 
         if ( $user === null || empty($user)) // verify user logged
         {
-            $_SESSION['attempt'] = 'Identifiants incorrects';
-            $_SESSION['mailSave'] = $_POST['email'];
-            exit(redirectTo('admin-login'));
+            handleLoginFaild();
         }
         else { // verify password hash and save email user to display
             if( hash('sha256', saltPepperStr($_POST['password']) ) === $user->getPassword() )
             {
-                if ( isset($_SESSION['mailSave'])) {
-                    unset($_SESSION['mailSave']);
-                }
-                $_SESSION['userId']     = $user->getId();
-                $_SESSION['userObject'] = $user;
-                
-                exit(redirectTo('admin'));
+                handleLoginSuccess( $user );
             }
             else { // error password 
-                $_SESSION['attempt'] = 'Identifiants incorrects';
-                $_SESSION['mailSave'] = $_POST['email'];
-                exit(redirectTo('admin-login'));
+                handleLoginFaild();
             }
         }
     }

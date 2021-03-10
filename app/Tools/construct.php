@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * function to get path file Js and Css
+ */
 function getPath( string $name ) {
     return BASE_URI.$name;
 }
@@ -22,6 +25,16 @@ function getPublicJs( string $name ) {
 
 function saltPepperStr( string $str ) {
     return 'salt'.$str.'pepper';
+}
+
+/**
+ * function to get path private and public assets
+ */
+function getPrivateAssets( string $name ) {
+    return getPath('/private/assets/'.$name);
+}
+function getPublicAssets( string $name ) {
+    return getPath('/public/assets/'.$name);
 }
 
 /**
@@ -62,4 +75,26 @@ function isLoged() {
         return true;
     }
     else return false;
+}
+
+function handleLoginFaild() {
+    $_SESSION['attempt'] = 'Identifiants incorrects';
+    $_SESSION['mailSave'] = $_POST['email'];
+    unsetLoginPost();
+    exit(redirectTo('admin-login'));
+}
+
+function handleLoginSuccess( $user ) {
+    if ( isset($_SESSION['mailSave'])) {
+        unset($_SESSION['mailSave']);
+    }
+    $_SESSION['userId']     = $user->getId();
+    $_SESSION['userObject'] = $user;
+    unsetLoginPost();
+    exit(redirectTo('admin'));
+}
+
+function unsetLoginPost() {
+    unset($_POST['email']);
+    unset($_POST['password']);
 }

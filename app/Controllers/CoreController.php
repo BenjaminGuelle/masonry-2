@@ -80,14 +80,12 @@ class CoreController
                 // $this->show('error/err403');
                 exit();
             }
-
         }
         else {
             redirectTo('admin-login');
             
             exit();
-        }
-            
+        }     
     }
 
     // Set acces database

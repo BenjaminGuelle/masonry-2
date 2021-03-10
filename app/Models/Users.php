@@ -35,7 +35,6 @@ class Users extends CoreModel
 
         $statement = $pdo->prepare($sql);
         $statement->execute([$_email]);
-
         $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
 
         if ( $modelFromDB === false ) :
@@ -49,9 +48,10 @@ class Users extends CoreModel
     public static function findById( int $_id) {
         $pdo = Database::getPDO();
 
-        $sql = "SELECT * FROM `". static::$table ."` WHERE id = " . $_id;
+        $sql = "SELECT * FROM `". static::$table ."` WHERE `id` = ?";
 
-        $statement = $pdo->query( $sql );
+        $statement = $pdo->prepare($sql);
+        $statement->execute([$_id]);
         $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
 
         if ( $modelFromDB === false ) :

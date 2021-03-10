@@ -1,81 +1,111 @@
-main .container {
+main .login-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main .container .login {
-    width: 400px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+main .login-container .login {
+    width: 80%;
+    height: 80%;
+}
+
+main .login-container .login .login-title {
+    text-align: center;
+}
+
+main .login-container .login .login-title h2 {
+    padding: 1em 0;
+}
+
+main .login-container .login .login-title h2 span {
+    position: relative;
+    font-size: 1.2em;
+    color: #192229;
+}
+
+main .login-container .login .login-title h2 span::after {
+    position: absolute;
+    content: "";
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 3px;
     background-color: #192229;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 4px 5px 4px -1px rgba(250,149,0,0.76);
 }
 
-main .container .login .login-title {
-    padding: 0.5em;
-    border-bottom: 2px solid #FA9500;
+main .login-container .login .login-title span {
+    font-size: 1em;
 }
 
-main .container .login .login-title h2 {
-    font-size: 1.5em;
-    color: #FA9500; 
-}
-
-main .container .login .form {
+/* FORM LOGIN */
+main .login-container .login .form {
+    margin: 1.5em 0;
     width: 100%;
     height: auto;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-main .container .login .form input {
-    width: 250px;
+main .login-container .login .form input {
+    width: 80%;
     height: 50px;
-    margin-bottom: 20px;
-    padding: 0 0.5em;
     border: none;
     border-left: 3px solid #FA9500;
-    border-top: 3px solid #FA9500;
-    background-color: #FBFBFF;
-    border-radius: 15px;
-    outline: none;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #E5E7E9;
+    color: #FA9500;
 }
 
-main .container .login .form button {
+main .login-container .login .form button {
     width: 100px;
-    height: 40px;
-    border-radius: 15px;
-    background-color: #FBFBFF;
+    margin-top: 1em;
+    height: 50px;
     border: none;
+    background-color: #192229;
     color: #FA9500;
     font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    box-shadow: 2px 2px 8px 4px rgba(250,250,250,0.6);
     outline: none;
     cursor: pointer;
 }
 
-main .container .login .form button:hover {
-    color: #FBFBFF;
+main .login-container .login .form button:hover {
     background-color: #FA9500;
+    color: #192229;
 }
 
-main .container .login .messages {
-    width: 100%;
-    height: 50px;
-}
-
-main .container .login .messages span {
+main .login-container .login .messages {
+    text-align: center;
     font-size: 1.3em;
     font-weight: 700;
-    color: #F4F4F4;
+    color: red;
 }
+
+@media screen and (min-width: 1024px) {
+    
+    main .login-container .login {
+        width: 50%;
+        height: 50%;
+    }
+
+    main .login-container .login .login-title h2 {
+        font-size: 1.5em;
+    }
+
+    main .login-container .login .login-title h2 span::after {
+        top: 40px;
+    }
+
+    main .login-container .login .form input {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px) {}

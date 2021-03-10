@@ -17,7 +17,11 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header id="header-admin">
+            <div class="header-toggle">
+                <span>Menu</span>
+                <img src="<?= getPrivateAssets('images/hamburger.svg') ?>" alt="menu-mobile">
+            </div>
             <div class="head-admin">
                 <h1>
                     <span>Back-Office</span><br>
@@ -35,7 +39,7 @@
             <form action="<?= $router->generate('admin-logout') ?>" method="POST" class="logout">
                 <button type="submit">Se déconnecter</button>
                 <div class="logo-logout">
-                    <img src="private/assets/images/log-out.svg" alt="logo logout">
+                    <img src="<?= getPrivateAssets('images/log-out.svg') ?>" alt="logo logout">
                 </div>
             </form>
             <nav>

@@ -20,12 +20,66 @@ body .container {
     display: flex;
 }
 
+/* HEADER TOGGLE ON MOBILE */
+header .header-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: auto;
+    margin-right: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: right 0.5s ease-in-out;
+    cursor: pointer;
+    outline: none;
+}
+
+header .header-toggle.active {
+    right: -100px;
+    transition: right 0.5s ease-in-out;
+}
+
+header .header-toggle.active span {
+    color: #192229;
+    transition: color 0.5s ease-in-out;
+}
+
+header .header-toggle span {
+    font-size: 1em;
+    color: #F4F4F4;
+    margin-right: 10px;
+    transition: color 0.5s ease-in-out;
+}
+header .header-toggle img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+header .header-toggle.active img {
+    transform: rotate(0);
+    transition: transform 0.5s ease-in-out;
+}
+
 /* HEADER ADMIN */
 header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
     width: 350px;
     height: 100vh;
     background-color: #192229;
     padding-top: 50px;
+    transition: left 0.5s ease-in-out;
+}
+
+header.active {
+    left: -350px;
+    transition: left 0.5s ease-in-out;
 }
 
 header .head-admin {
@@ -167,3 +221,10 @@ header nav a::before{
     height: 8px;
     background-color: #FA9500;
 }
+
+
+
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {}

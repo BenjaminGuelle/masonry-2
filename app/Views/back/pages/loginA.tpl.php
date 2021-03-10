@@ -1,9 +1,12 @@
-<section class="container">
+<section class="login-container">
     <div class="login">
         <div class="login-title">
             <h2>
-                <span>Veuillez vous connecter</span>
+                <span>Back-office - SARL Stephane Michel</span>
             </h2>
+            <span>
+                Bienvenue sur l'espace d'administration, veuillez vous connecter pour continuer.
+            </span>
         </div>
         <form action="<?= $router->generate('admin-loginPost') ?>" method="POST" class="form">
             <input 
