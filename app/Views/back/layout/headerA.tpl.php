@@ -24,8 +24,21 @@
                     <span>SARL Stéphane Michel</span>
                 </h1>
             </div>
+
+            <?php if (isset($_SESSION['userId'])) : ?>
+            <div class="user-logged">
+                <span> 
+                    Bienvenue
+                    <?= $user->getFirstName().' '.$user->getLastName() ?>
+                </span>
+            </div>
+            <form action="<?= $router->generate('admin-logout') ?>" method="POST" class="logout">
+                <button type="submit">Se déconnecter</button>
+                <div class="logo-logout">
+                    <img src="private/assets/images/log-out.svg" alt="logo logout">
+                </div>
+            </form>
             <nav>
-            <?php ?>
                 <h2>
                     <span>Gestion des éléments :</span>
                 </h2>
@@ -35,6 +48,8 @@
                 <a href="#">Services</a>
                 <a href="#">Présentation</a>
             </nav>
+            <?php endif; ?>
+
         </header>
         <main>
 

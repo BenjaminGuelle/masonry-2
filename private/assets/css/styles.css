@@ -50,11 +50,74 @@ header .head-admin h1 span:first-child {
     border-bottom: 1px solid #F4F4F4;
 }
 
+/* USER LOGGED */
+header .user-logged {
+    width: 80%;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+header .user-logged span {
+    font-size: 1em;
+    font-weight: 100;
+    color: #FA9500;
+}
+
+/* BUTTON LOGOUT */
+header .logout {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header .logout:hover .logo-logout {
+    animation: logout 0.8s infinite ease-in-out;
+}
+
+@keyframes logout {
+    0% { 
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+header .logout button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: #FA9500;
+    margin-right: 1em;
+    background-color: #192229;
+    cursor: pointer;
+    outline: none;
+}
+
+header .logout .logo-logout {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logout .logo-logout img {
+    width: 100%;
+}
+
+/* NAVBAR */
 header nav {
     width: 80%;
     height: auto;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }

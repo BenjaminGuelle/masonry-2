@@ -46,6 +46,21 @@ class Users extends CoreModel
         
     }
 
+    public static function findById( int $_id) {
+        $pdo = Database::getPDO();
+
+        $sql = "SELECT * FROM `". static::$table ."` WHERE id = " . $_id;
+
+        $statement = $pdo->query( $sql );
+        $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
+
+        if ( $modelFromDB === false ) :
+            return static::$table." not found !";
+        endif;
+
+        return new static($modelFromDB);
+    }
+
 
     //===============================
     // Getters

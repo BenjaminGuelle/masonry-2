@@ -11,11 +11,13 @@ define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
 /*******************
  **** SESSION ******
 ********************/
+session_cache_expire(24 * 60 * 365);
 if (isset( $_COOKIE['token_session']))
 {
     session_start( [$_COOKIE['token_session']] );
 }
 else session_start();
+
 
 
 
@@ -43,6 +45,9 @@ $router->map(
 // === PRIVATE ===
 $router->map(
     'GET', '/Admin',        'AdminController::admin',   'admin'
+);
+$router->map(
+    'POST', '/Admin',  'LoginController::logout',   'admin-logout'
 );
 $router->map(
     'GET', '/Admin/login',  'LoginController::login',   'admin-login'

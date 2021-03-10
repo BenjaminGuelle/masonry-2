@@ -21,7 +21,7 @@ class CoreController
             $this->checkAuth($authRoles);
             
             $token_session = encrypt(time(), 'sha256');
-            setcookie("token_session", $token_session, (time() + 24 * 3600 * 365));
+            setcookie("token_session", $token_session, (time() + 24 * 3600 * 360));
             session_regenerate_id($token_session);
         }
     }
