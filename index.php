@@ -18,9 +18,6 @@ if (isset( $_COOKIE['token_session']))
 }
 else session_start();
 
-
-
-
 /*******************
  **** ROUTER *******
 ********************/
@@ -55,7 +52,9 @@ $router->map(
 $router->map(
     'POST', '/Admin/login', 'LoginController::loginPost',   'admin-loginPost'
 );
-
+$router->map(
+    'GET', '/Admin/profils',  'UsersController::list',   'admin-profils'
+);
 
 $match = $router->match();
 
