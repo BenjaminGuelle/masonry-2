@@ -12,57 +12,62 @@
                 <li class="item">
                     Prenom
                 </li>
-                <li class="item">
+                <li class="item email">
                     Email
                 </li>
-                <li class="item">
+                <li class="item password">
                     Mot de passe
                 </li>
                 <li class="item">
                     Rôle
                 </li>
-                <li class="item">
+                <li class="item createdAt">
                     Date de création
                 </li>
-                <li class="item">
+                <li class="item updatedAt">
                     Derniere modification
                 </li>
             </ul>
+
             <?php foreach( $usersList as $user ): ?>
-            <ul class="items row-users">
-                <li class="item">
-                    <?= $user->getLastName() ?>   
-                </li>
-                <li class="item">
-                    <?= $user->getFirstName() ?>
-                </li>
-                <li class="item">
-                    <?= $user->getEmail() ?>
-                </li>
-                <li class="item">
-                    <?php
-                        if ( $user->getPassword() > 1 ) {
-                            echo '*****';
-                        }
-                        else $user->getPassword();
-                    ?>
-                </li>
-                <li class="item">
-                    <?= $user->getRole() ?>
-                </li>
-                <li class="item">
-                    <?= $user->getCreatedAt() ?>
-                </li>
-                <li class="item">
-                    <?php
-                        if ( $user->getUpdatedAt() === null ) {
-                            echo '-';
-                        }
-                        else $user->getUpdatedAt();
-                    ?>
-                </li>
-            </ul>
+                <ul class="items row-users">
+                    <div class="item-gear">
+                        <img src="<?= getPrivateAssets('images/settings.svg') ?>" alt="logo-update">
+                    </div>
+                    <li class="item">
+                        <?= $user->getLastName() ?>   
+                    </li>
+                    <li class="item">
+                        <?= $user->getFirstName() ?>
+                    </li>
+                    <li class="item email">
+                        <?= $user->getEmail() ?>
+                    </li>
+                    <li class="item password">
+                        <?php
+                            if ( $user->getPassword() > 1 ) {
+                                echo '*****';
+                            }
+                            else $user->getPassword();
+                        ?>
+                    </li>
+                    <li class="item">
+                        <?= $user->getRole() ?>
+                    </li>
+                    <li class="item createdAt">
+                        <?= $user->getCreatedAt() ?>
+                    </li>
+                    <li class="item updatedAt">
+                        <?php
+                            if ( $user->getUpdatedAt() === null ) {
+                                echo '-';
+                            }
+                            else $user->getUpdatedAt();
+                        ?>
+                    </li>
+                </ul>
             <?php endforeach; ?>
+
         </div>
         
         

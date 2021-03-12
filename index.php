@@ -5,9 +5,6 @@ require_once __DIR__. '/app/Tools/construct.php';
 require_once __DIR__. '/app/Tools/log.php';
 
 initLogs(time());
-
-define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
-
 /*******************
  **** SESSION ******
 ********************/
@@ -17,6 +14,19 @@ if (isset( $_COOKIE['token_session']))
     session_start( [$_COOKIE['token_session']] );
 }
 else session_start();
+
+$http_host = $_SERVER['HTTP_HOST'];
+$server_name = $_SERVER['SERVER_NAME'];
+$request_scheme = $_SERVER['REQUEST_SCHEME'];
+$request_uri = $_SERVER['REQUEST_URI'];
+$script_name = $_SERVER['SCRIPT_NAME'];
+$php_self = $_SERVER['PHP_SELF'];
+
+$mode = (($http_host == $server_name) && $server_name == "localhost") ? "development" : "production";
+
+$url_particle = $mode == "development" ? "/masonry-2" : "";
+// define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
+define( "BASE_URI", $url_particle ?? "" );
 
 /*******************
  **** ROUTER *******

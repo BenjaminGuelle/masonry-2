@@ -34,4 +34,7 @@
             
         <?php endforeach; ?>
     </div>
+    <div class="list-buttons">
+        
+    </div>
 </section>
