@@ -58,6 +58,8 @@ $router->map(
 
 $match = $router->match();
 
+// dump(get_fill_ariane());
+
 $dispatcher = new Dispatcher( $match, 'ErrorController::error404' );
 $dispatcher->setControllersNamespace('App\Controllers');
 $dispatcher->dispatch();

@@ -8,10 +8,11 @@ class UsersController extends CoreController
 {
     public function list() {
         
-        $userLogged = [];
+        $datas = [];
+        $datas['user'] = Users::findById($_SESSION['userId']);
 
-        $userLogged['user'] = Users::findById($_SESSION['userId']);
+        $datas['breadcrumper'] = get_fill_ariane();
 
-        $this->showAdmin( 'pages/users', $userLogged );
+        $this->showAdmin( 'pages/users', $datas );
     }
 }

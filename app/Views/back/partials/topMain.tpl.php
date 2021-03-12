@@ -3,11 +3,35 @@
         <span>
             Gestion de l'élément : 
         </span>
-        <span>
-            <?= '/'.$GLOBALS['match']['name'] ?>
+        <span class="endtitle">
+            <?php
+                if ( end($breadcrumper) === 'admin' ) {
+                    echo 'accueil';
+                }
+                else echo end($breadcrumper);
+            ?>
         </span>
     </h3>
-    <span>
-        <?= '/'.$GLOBALS['match']['name'] ?>
-    </span>
+    <div class="breadcrumper">
+        <?php foreach( $breadcrumper as $path ) : ?>
+            <a  class="breadcrumper_link"
+                href="
+                <?php
+                    if ( $path === 'admin' ) {
+                        echo $router->generate('admin');
+                    }
+                    else echo $router->generate(buildPath($breadcrumper));
+                ?>
+            ">
+                <span>/</span>
+                <?php
+                    if ( $path === 'admin' ) {
+                        echo 'accueil';
+                    }
+                    else echo $path;
+                ?>
+            </a>
+            
+        <?php endforeach; ?>
+    </div>
 </section>

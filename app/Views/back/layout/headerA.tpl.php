@@ -46,8 +46,8 @@
                 <h2>
                     <span>Gestion des éléments :</span>
                 </h2>
-                <a href="<?= $router->generate('admin-profils') ?>">Utilisateurs</a>
-                <a href="#">Accueil</a>
+                <a href="<?= $router->generate('admin') ?>">Accueil</a>
+                <a href="<?= $router->generate('admin-profils') ?>">Profils</a>
                 <a href="#">Galerie</a>
                 <a href="#">Slider</a>
                 <a href="#">Services</a>

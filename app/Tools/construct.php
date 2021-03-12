@@ -99,35 +99,22 @@ function unsetLoginPost() {
     unset($_POST['password']);
 }
 
-// function to get all path
-function get_all_paths() {
-    $getPath = $GLOBALS['router']->getRoutes();
-    $arrPath = [];
-    foreach ($getPath as $index => $namePath) {
-        array_push($arrPath, $namePath[3]);
-    }
-    return $arrPath;
-}
-
 /**
  * Create breadcrump
  * @param Type @name
  * @return string breadcrump
  */
-function get_fil_ariane() {
-    $routeList = get_all_paths();
-    $currentRoute = $GLOBALS['match']['name'];
-    foreach ( $routeList as $routeName ) {
-        $nameArr = [];
-        if ( $currentRoute === $routeName ) {
-            if ( (str_contains($currentRoute, '-')) === true ) {
-                $nameArr = explode( '-', $currentRoute);
-            }
-            else {
-                // $nameArr += $currentRoute;
-                array_push($nameArr, $routeName);
-            }
-        }
-    }
+function get_fill_ariane() {
+    $routeName = $GLOBALS['match']['name'];
+    $nameArr = explode('-', $routeName);
     return $nameArr;
+}
+
+function buildPath( $names ) {
+    if ( $names < 1 ) {
+        return $names;
+    }
+    else { 
+        return $newPath = implode('-', $names);
+     }
 }

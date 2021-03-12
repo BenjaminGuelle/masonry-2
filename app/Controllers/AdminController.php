@@ -7,11 +7,11 @@ use App\Models\Users;
 class AdminController extends CoreController
 {
     public function admin() {
-        
-        $userLogged = [];
-        $userLogged['user'] = Users::findById($_SESSION['userId']);
+        $datas = [];
+        $datas['user'] = Users::findById($_SESSION['userId']);
 
+        $datas['breadcrumper'] = get_fill_ariane();
 
-        $this->showAdmin( 'pages/homeA', $userLogged );
+        $this->showAdmin( 'pages/homeA', $datas );
     }
 }
