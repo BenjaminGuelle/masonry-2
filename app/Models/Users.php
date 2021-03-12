@@ -16,8 +16,8 @@ class Users extends CoreModel
     protected $email;
     protected $password;
     protected $role;
-    protected $createdAt;
-    protected $updatedAt;
+    protected $created_at;
+    protected $updated_at;
 
     //===============================
     // Method
@@ -61,6 +61,27 @@ class Users extends CoreModel
         return new static($modelFromDB);
     }
 
+    public static function findAll() {
+        $pdo = Database::getPDO();
+        $sql = "SELECT * FROM `". static::$table ."`";
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
+        $modelListFromDatabase = $statement->fetchAll( \PDO::FETCH_ASSOC );
+
+        if( $modelListFromDatabase === false ) :
+            exit( static::$table." not found !" );
+        endif;
+
+        $modelsArray = [];
+
+        foreach( $modelListFromDatabase as $modelDataFromDatabase ) :
+            $model = new static( $modelDataFromDatabase );
+            $modelsArray[] = $model;
+        endforeach;
+
+        return $modelsArray;
+    }
+
 
     //===============================
     // Getters
@@ -71,8 +92,8 @@ class Users extends CoreModel
     public function getEmail() { return $this->email; }
     public function getPassword() { return $this->password; }
     public function getRole() { return $this->role; }
-    public function getCreatedAt() { return $this->createdAt; }
-    public function getUpdatedAt() { return $this->updatedAt; }
+    public function getCreatedAt() { return $this->created_at; }
+    public function getUpdatedAt() { return $this->updated_at; }
 
     //===============================
     // Setters

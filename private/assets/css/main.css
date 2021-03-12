@@ -54,6 +54,8 @@ main .section .board {
     padding: 20px 0;
 }
 
+
+
 /* SHEET SECTION */
 
 @media screen and (min-width: 1024px) {
@@ -66,5 +68,42 @@ main .section .board {
 
     main .section .topMain h3 {
         font-size: 1.3em;
+    }
+
+    main .section .board .itemslist {
+        width: 100%;
+        height: 100%;
+    }
+
+    main .section .board .itemslist .items {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    main .section .board .itemslist .row-title {
+    }
+
+    main .section .board .itemslist .items li {
+        flex: 1;
+        box-sizing: border-box;
+        margin-right: 0.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e5e5e5;
+        font-size: 1em;
+        font-weight: 100;
+        
+    }
+    
+    main .section .board .itemslist .row-users .item {
+        background-color: #fbfbff;
+        border-bottom: 1px solid #e5e5e5;
+        font-size: 0.8em;
+        font-weight: 100;
+        overflow-x: auto;
     }
 }

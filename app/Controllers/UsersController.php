@@ -11,7 +11,10 @@ class UsersController extends CoreController
         $datas = [];
         $datas['user'] = Users::findById($_SESSION['userId']);
 
+        $datas['usersList'] = Users::findAll();
+
         $datas['breadcrumper'] = get_fill_ariane();
+
 
         $this->showAdmin( 'pages/users', $datas );
     }
