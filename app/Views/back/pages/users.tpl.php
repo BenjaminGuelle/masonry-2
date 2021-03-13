@@ -1,6 +1,7 @@
 <section class="users section">
         <?php
             // On inclut des sous-vues => "partials"
+            include __DIR__.'/../partials/modal.tpl.php';
             include __DIR__.'/../partials/topMain.tpl.php';
         ?>
     <div class="board">
@@ -31,9 +32,10 @@
 
             <?php foreach( $usersList as $user ): ?>
                 <ul class="items row-users">
-                    <div class="item-gear">
+                    <form action="<?= $router->generate('admin-profils-update', [ "id" => $user->getId() ]) ?>" method="GET" class="item-gear get_modal" data-id="<?= $user->getId() ?>">
                         <img src="<?= getPrivateAssets('images/settings.svg') ?>" alt="logo-update">
-                    </div>
+                        <button type="submit"></button>
+                    </form>
                     <li class="item">
                         <?= $user->getLastName() ?>   
                     </li>

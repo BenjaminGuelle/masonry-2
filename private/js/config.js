@@ -15,3 +15,21 @@ function isActiveMenuAdmin() {
         sectionAdmin.classList.add('active');
     }
 }
+
+// Function to active Modal
+// const btnModal = document.querySelectorAll('.get_modal');
+
+// for (let index = 0; index < btnModal.length; index++) {
+//     btnModal[index].addEventListener('click', handleActiveModal);
+// }
+
+// function handleActiveModal() {
+//     console.log('Active modal');
+//     const modal = document.querySelector('.modal');
+//     if ( modal.classList.contains('active') ) {
+//         modal.classList.remove('active');
+//     }
+//     else {
+//         modal.classList.add('active');
+//     }
+// }

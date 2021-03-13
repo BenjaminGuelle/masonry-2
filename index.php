@@ -65,6 +65,9 @@ $router->map(
 $router->map(
     'GET', '/Admin/profils',  'UsersController::list',   'admin-profils'
 );
+$router->map(
+    'GET', '/Admin/profils[i:id]/update',  'UsersController::update',   'admin-profils-update'
+);
 
 $match = $router->match();
 

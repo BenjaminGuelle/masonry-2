@@ -110,11 +110,16 @@ function get_fill_ariane() {
     return $nameArr;
 }
 
-function buildPath( $names ) {
-    if ( $names < 1 ) {
-        return $names;
+function build_breadcrump( $path ) {
+    if ( $path === 'admin' ) {
+        echo $router->generate('admin');
     }
-    else { 
-        return $newPath = implode('-', $names);
-     }
+    elseif ( $path === 'profils' ) {
+        echo $router->generate('admin-profils');
+    }
+    elseif ( $path === 'update' ) {
+        echo $router->generate('admin-profils-update');
+    }
 }
+
+

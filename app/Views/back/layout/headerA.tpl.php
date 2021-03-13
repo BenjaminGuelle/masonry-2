@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?= getPrivateCss('styles') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('main') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('login') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('modal') ?>">
 </head>
 <body>
     <div class="container">

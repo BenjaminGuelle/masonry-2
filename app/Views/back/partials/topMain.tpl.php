@@ -20,7 +20,12 @@
                     if ( $path === 'admin' ) {
                         echo $router->generate('admin');
                     }
-                    else echo $router->generate(buildPath($breadcrumper));
+                    elseif ( $path === 'profils' ) {
+                        echo $router->generate('admin-profils');
+                    }
+                    elseif ( $path === 'update' ) {
+                        echo $router->generate('admin-profils-update');
+                    }
                 ?>
             ">
                 <span>/</span>
