@@ -11,7 +11,6 @@ class ErrorController extends CoreController
      */
     public function error404() 
     {
-        //TODO
-        dump('404');
+        $this->show( 'pages/errors' );
     }
 }

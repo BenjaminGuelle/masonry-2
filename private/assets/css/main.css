@@ -126,6 +126,13 @@ main .section .board .itemslist .row-users .item-gear {
     cursor: pointer;
 }
 
+main .section .board .itemslist .row-users .item-gear button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fbfbff;
+}
+
 main .section .board .itemslist .row-users .item-gear img {
     width: 100%;
 }

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="<?= getPublicCss('gallery') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('errors') ?> ">
 
 </head>
 <body>

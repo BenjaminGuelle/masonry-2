@@ -15,7 +15,7 @@ class CoreController
         ];
 
         // Verify protected road
-        if ( array_key_exists($routeName, $acl)) {
+        if ( isset($acl[$routeName]) && array_key_exists($routeName, $acl)) {
 
             $authRoles = $acl[ $routeName ];
 
@@ -41,9 +41,9 @@ class CoreController
         extract( $viewVars );
 
         // $viewVars est disponible dans chaque fichier de vue
-        require_once __DIR__.'/../views/front/layout/header.tpl.php';
-        include_once __DIR__.'/../views/front/'.$viewName.'.tpl.php';
-        require_once __DIR__.'/../views/front/layout/footer.tpl.php';
+        require_once __DIR__.'./../Views/front/layout/header.tpl.php';
+        include_once __DIR__.'./../Views/front/'.$viewName.'.tpl.php';
+        require_once __DIR__.'./../Views/front/layout/footer.tpl.php';
     }
 
     protected function showAdmin( string $viewName, $viewVars = [] ) 
@@ -55,12 +55,11 @@ class CoreController
 
         // extract pour recuperer les values directement
         extract( $viewVars );
-        //dump( get_defined_vars() );
 
         // $viewVars est disponible dans chaque fichier de vue
-        require_once __DIR__.'/../views/back/layout/headerA.tpl.php';
-        include_once __DIR__.'/../views/back/'.$viewName.'.tpl.php';
-        require_once __DIR__.'/../views/back/layout/footerA.tpl.php';
+        require_once __DIR__.'./../Views/back/layout/headerA.tpl.php';
+        include_once __DIR__.'./../Views/back/'.$viewName.'.tpl.php';
+        require_once __DIR__.'./../Views/back/layout/footerA.tpl.php';
     }
 
     // Verify authorization to acces views
@@ -96,6 +95,10 @@ class CoreController
             return self::getConfig();
         }
         return null;
+    }
+    
+    protected function saltPepper(string $str) {
+        return $this->getConfigVar()['SALT'].$str.$this->getConfigVar()['PEPPER'];
     }
 
     //===============================

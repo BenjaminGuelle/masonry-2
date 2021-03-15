@@ -36,11 +36,11 @@ class LoginController extends CoreController
             handleLoginFaild();
         }
         else { // verify password hash and save email user to display
-            if( hash('sha256', saltPepperStr($_POST['password']) ) === $user->getPassword() )
+            if( hash('sha256', $this->saltPepper($_POST['password']) ) === $user->getPassword() )
             {
                 handleLoginSuccess( $user );
             }
-            else { // error password 
+            else { // error password
                 handleLoginFaild();
             }
         }

@@ -33,8 +33,9 @@
             <?php foreach( $usersList as $user ): ?>
                 <ul class="items row-users">
                     <form action="<?= $router->generate('admin-profils-update', [ "id" => $user->getId() ]) ?>" method="GET" class="item-gear get_modal" data-id="<?= $user->getId() ?>">
-                        <img src="<?= getPrivateAssets('images/settings.svg') ?>" alt="logo-update">
-                        <button type="submit"></button>
+                        <button type="submit">
+                            <img src="<?= getPrivateAssets('images/settings.svg') ?>" alt="logo-update">
+                        </button>
                     </form>
                     <li class="item">
                         <?= $user->getLastName() ?>   
@@ -64,12 +65,11 @@
                             if ( $user->getUpdatedAt() === null ) {
                                 echo '-';
                             }
-                            else $user->getUpdatedAt();
+                            else echo $user->getUpdatedAt();
                         ?>
                     </li>
                 </ul>
             <?php endforeach; ?>
-
         </div>
         
         

@@ -1,0 +1,43 @@
+[15-Mar-2021 18:42:00 UTC] PHP Fatal error:  Cannot redeclare App\Tools\Database::getDB_PASSWORD() in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php on line 100
+[15-Mar-2021 18:43:20 UTC] PHP Warning:  syntax error, unexpected ')' in /home/krpf4070/dev.benjaminguelle.com/app/Controllers/../config.ini on line 4
+ in /home/krpf4070/dev.benjaminguelle.com/app/Controllers/CoreController.php on line 103
+[15-Mar-2021 18:43:20 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php on line 24
+[15-Mar-2021 18:43:20 UTC] PHP Fatal error:  Uncaught Error: Undefined constant App\Tools\Database::errorsDate in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php:41
+Stack trace:
+#0 /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php(59): App\Tools\Database->__construct()
+#1 /home/krpf4070/dev.benjaminguelle.com/app/Models/Users.php(30): App\Tools\Database::getPDO()
+#2 /home/krpf4070/dev.benjaminguelle.com/app/Controllers/LoginController.php(31): App\Models\Users::findByEmail()
+#3 /home/krpf4070/dev.benjaminguelle.com/vendor/benoclock/alto-dispatcher/Dispatcher.php(127): App\Controllers\LoginController->loginPost()
+#4 /home/krpf4070/dev.benjaminguelle.com/index.php(82): Dispatcher->dispatch()
+#5 {main}
+  thrown in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php on line 41
+[15-Mar-2021 18:47:15 UTC] PHP Fatal error:  Uncaught Error: Undefined constant App\Tools\Database::errorsDate in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php:41
+Stack trace:
+#0 /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php(59): App\Tools\Database->__construct()
+#1 /home/krpf4070/dev.benjaminguelle.com/app/Models/Users.php(30): App\Tools\Database::getPDO()
+#2 /home/krpf4070/dev.benjaminguelle.com/app/Controllers/LoginController.php(31): App\Models\Users::findByEmail()
+#3 /home/krpf4070/dev.benjaminguelle.com/vendor/benoclock/alto-dispatcher/Dispatcher.php(127): App\Controllers\LoginController->loginPost()
+#4 /home/krpf4070/dev.benjaminguelle.com/index.php(82): Dispatcher->dispatch()
+#5 {main}
+  thrown in /home/krpf4070/dev.benjaminguelle.com/app/Tools/Database.php on line 41
+[15-Mar-2021 19:06:10 UTC] PHP Fatal error:  Uncaught Error: Class "CoreController" not found in /home/krpf4070/dev.benjaminguelle.com/app/Tools/construct.php:39
+Stack trace:
+#0 /home/krpf4070/dev.benjaminguelle.com/app/Controllers/LoginController.php(39): saltPepperStr()
+#1 /home/krpf4070/dev.benjaminguelle.com/vendor/benoclock/alto-dispatcher/Dispatcher.php(127): App\Controllers\LoginController->loginPost()
+#2 /home/krpf4070/dev.benjaminguelle.com/index.php(82): Dispatcher->dispatch()
+#3 {main}
+  thrown in /home/krpf4070/dev.benjaminguelle.com/app/Tools/construct.php on line 39
+[15-Mar-2021 19:07:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\CoreController::getConfigVars() in /home/krpf4070/dev.benjaminguelle.com/app/Tools/construct.php:41
+Stack trace:
+#0 /home/krpf4070/dev.benjaminguelle.com/app/Controllers/LoginController.php(39): saltPepperStr()
+#1 /home/krpf4070/dev.benjaminguelle.com/vendor/benoclock/alto-dispatcher/Dispatcher.php(127): App\Controllers\LoginController->loginPost()
+#2 /home/krpf4070/dev.benjaminguelle.com/index.php(82): Dispatcher->dispatch()
+#3 {main}
+  thrown in /home/krpf4070/dev.benjaminguelle.com/app/Tools/construct.php on line 41
+[15-Mar-2021 19:12:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method App\Controllers\LoginController::getConfigVars() in /home/krpf4070/dev.benjaminguelle.com/app/Controllers/CoreController.php:101
+Stack trace:
+#0 /home/krpf4070/dev.benjaminguelle.com/app/Controllers/LoginController.php(39): App\Controllers\CoreController->saltPepper()
+#1 /home/krpf4070/dev.benjaminguelle.com/vendor/benoclock/alto-dispatcher/Dispatcher.php(127): App\Controllers\LoginController->loginPost()
+#2 /home/krpf4070/dev.benjaminguelle.com/index.php(82): Dispatcher->dispatch()
+#3 {main}
+  thrown in /home/krpf4070/dev.benjaminguelle.com/app/Controllers/CoreController.php on line 101

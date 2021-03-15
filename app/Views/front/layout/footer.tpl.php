@@ -50,5 +50,6 @@
     <!-- Js  -->
     <script src=" <?= getPublicJs('index') ?> "></script>
     <script src=" <?= getPublicJs('slideshow') ?> "></script>
+    <script src=" <?= getPublicMjs('app') ?> " type="text/javascript" ></script>
 </body>
 </html>

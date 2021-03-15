@@ -1,0 +1,79 @@
+main .user_select .board .user_update {
+    width: 100%;
+    height: 100%;
+}
+
+main .user_select .board .user_update form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main .user_select .board .user_update form .item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main .user_select .board .user_update form .item span {
+    width: 200px;
+    height: 30px;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 100;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+main .user_select .board .user_update form .item input {
+    border: none;
+    background-color: #fbfbff;
+    border-bottom: 1px solid #e5e5e5;
+    height: 30px;
+    outline: none;
+    caret-color: #FA9500;
+}
+
+main .user_select .board .user_update form button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    background-color: #192229;
+    color: #FA9500;
+    cursor: pointer;
+}
+
+main .user_select .board .user_update form button:hover {
+    background-color: #FA9500;
+    color: #192229;
+}
+
+@media screen and (min-width: 1024px) {
+    main .user_select .board .user_update form{
+        justify-content: flex-start;
+    }
+    
+    main .user_select .board .user_update form .item{
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+    
+    main .user_select .board .user_update form .item span {
+        width: 200px;
+        height: 40px;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    
+    main .user_select .board .user_update form .item input {
+        width: 300px;
+        border: none;
+        background-color: #fbfbff;
+        border-bottom: 1px solid #e5e5e5;
+        height: 40px;
+    }
+}

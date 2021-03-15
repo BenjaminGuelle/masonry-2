@@ -26,7 +26,7 @@ $mode = (($http_host == $server_name) && $server_name == "localhost") ? "develop
 
 $url_particle = $mode == "development" ? "/masonry-2" : "";
 // define( "BASE_URI", $_SERVER['BASE_URI'] ?? "" );
-define( "BASE_URI", $url_particle ?? "" );
+define( "BASE_URI", $url_particle);
 
 /*******************
  **** ROUTER *******
@@ -66,12 +66,16 @@ $router->map(
     'GET', '/Admin/profils',  'UsersController::list',   'admin-profils'
 );
 $router->map(
+    'GET', '/Admin/profils?status=[:status]',  'UsersController::list',   'admin-profils-status'
+);
+$router->map(
     'GET', '/Admin/profils[i:id]/update',  'UsersController::update',   'admin-profils-update'
+);
+$router->map(
+    'POST', '/Admin/profils[i:id]/update',  'UsersController::updatePost',   'admin-profils-updatePost'
 );
 
 $match = $router->match();
-
-// dump(get_fill_ariane());
 
 $dispatcher = new Dispatcher( $match, 'ErrorController::error404' );
 $dispatcher->setControllersNamespace('App\Controllers');

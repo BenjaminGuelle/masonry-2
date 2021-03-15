@@ -22,26 +22,34 @@ class Users extends CoreModel
     //===============================
     // Method
     //===============================
-
     public static function findByEmail( string $_email )
     {
-        $pdo = Database::getPDO();
-
-        if ( $pdo === null ) {
-            exit;
-        };
-
-        $sql = "SELECT * FROM `". static::$table ."` WHERE `email` = ?";
-
-        $statement = $pdo->prepare($sql);
-        $statement->execute([$_email]);
-        $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
-
-        if ( $modelFromDB === false ) :
-            return false;
-        endif;
-
-        return new static($modelFromDB);
+        logEvent('findByEmail()');
+        logEvent(Database::string());
+        try {
+             $pdo = Database::getPDO();
+    
+            if ( $pdo === null ) {
+                logEvent('PDO EST NUL');
+                exit;
+            };
+    
+            $sql = "SELECT * FROM `". static::$table ."` WHERE `email` = ?";
+            logEvent($sql);
+    
+            $statement = $pdo->prepare($sql);
+            $statement->execute([$_email]);
+            $modelFromDB = $statement->fetch( \PDO::FETCH_ASSOC );
+    
+            if ( $modelFromDB === false ) :
+                return false;
+            endif;
+    
+            return new static($modelFromDB);
+        }
+        catch(\Exception $error) {
+            logError(print_r($error));
+        }
         
     }
 
@@ -82,6 +90,32 @@ class Users extends CoreModel
         return $modelsArray;
     }
 
+    public function update() {
+        $pdo = Database::getPDO();
+        $userUpdate = get_object_vars( $this );
+        unset( $userUpdate['id'] );
+        unset( $userUpdate['password'] );
+        unset( $userUpdate['created_at'] );
+
+        $set_arr = [];
+        foreach ( $userUpdate as $field => $values ) {
+            $set_arr[] = '`'.$field . "` = ?";
+        }
+        $set_str = implode(', ', $set_arr);
+
+        $prepared = $pdo->prepare(
+            "UPDATE `". static::$table ."` SET ".$set_str." WHERE `id` = {$this->id}"
+        );
+
+        $values = array_values($userUpdate);
+        
+        $insertRows = $prepared->execute($values);
+        if ( $insertRows > 0 ) {
+            return true;
+        }
+        else return false;
+    }
+
 
     //===============================
     // Getters
@@ -99,12 +133,12 @@ class Users extends CoreModel
     // Setters
     //===============================
     public function setId( string $_id ) { $this->id = $_id; }
-    public function setFirstName( string $_name ) { $this->name = $_name; }
-    public function setLastName( string $_name  ) { $this->name = $_name; }
+    public function setFirstName( string $_firstName ) { $this->firstName = $_firstName; }
+    public function setLastName( string $_lastName  ) { $this->lastName = $_lastName; }
     public function setEmail( string $_email ) { $this->email = $_email; }
     public function setPassword( string $_password ) { $this->password = $_password; }
     public function setRole( string $_role ) { $this->role = $_role; }
-    public function setUpdatedAt( string $_updatedAt ) { $this->updatedAt = $_updatedAt; }
+    public function setUpdatedAt( string $_updatedAt ) { $this->updated_at = $_updatedAt; }
 
 
 }
