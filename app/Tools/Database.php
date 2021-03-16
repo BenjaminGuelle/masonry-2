@@ -20,7 +20,6 @@
         private $DB_PORT;
         
         private function __construct() {
-            logEvent('ini config ini');
             foreach ( CoreController::getConfigVar() as $att_name => $att_value )
             {
                 $this->{$att_name} = $att_value;
@@ -28,9 +27,14 @@
 
             // Récupération des données du fichier de config
             try {
-                logEvent('TRY PDO');
+                $settings =  "mysql:host={$this->getDB_HOST()};";
+                if ($GLOBALS['mode'] === 'production') {
+                    $settings .= "port={$this->getDB_PORT()};";
+                }
+                $settings .= "dbname={$this->getDB_NAME()};charset=utf8";
+
                 $this->dbh = new \PDO(
-                    "mysql:host={$this->getDB_HOST()};port={$this->getDB_PORT()};dbname={$this->getDB_NAME()};charset=utf8",
+                    $settings,
                     $this->getDB_USERNAME(),
                     $this->getDB_PASSWORD(),
                     array(\PDO::ATTR_ERRMODE => \PDO::ERRMODE_WARNING) // Affiche les erreurs SQL à l'écran
@@ -39,7 +43,6 @@
             }
             catch(\Exception $exception) {
                 /*self::errorsDate.push(time());*/
-                logError(print_r($exception));
                 //2 : send log
                 // self::message = 'Erreur de connexion database';
                 exit;
@@ -47,7 +50,6 @@
         }
         // the unique method you need to use
         public static function getPDO() {
-            logEvent('GET PDO');
             
             // if (self::verifyErrors() === false)
             // {
@@ -55,15 +57,12 @@
             // }
             // If no instance => create one
             if (empty(self::$_instance)) {
-                logEvent('instance EMPTY');
                 self::$_instance = new \App\Tools\Database();
             }
             if ( !isset(self::$_instance->dbh) )
             {
-                logEvent('instance NOT SET');
                 return null;
             }
-            logEvent('instance SUCCESs');
             return self::$_instance->dbh;
         }
 
@@ -83,10 +82,6 @@
                 }
                 else return false;
             }
-        }
-        
-        public static function string() {
-            return 'mon super string rose';
         }
 
         //===============================

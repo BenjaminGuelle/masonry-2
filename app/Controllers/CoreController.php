@@ -7,7 +7,9 @@ class CoreController
     public function __construct()
     {
         global $match;
-        
+        if ( !isset($match['name']) || $match === false) {
+            exit(redirectTo('error'));
+        }
         $routeName = $match['name'];
         $acl = [
             "admin"         => ['superadmin', 'admin'],
@@ -104,7 +106,7 @@ class CoreController
     //===============================
     // Getters
     //===============================
-    private static function getConfig() { return parse_ini_file(__DIR__.'/../config.ini'); }
+    private static function getConfig() { return parse_ini_file('./config/config.ini'); }
     
 
     //===============================

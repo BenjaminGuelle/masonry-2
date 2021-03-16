@@ -5,43 +5,52 @@ use App\Controllers\CoreController;
 /**
  * function to get path file Js and Css
  */
-function getPath( string $name ) {
+function getPath( string $name ) 
+{
     return BASE_URI.$name;
 }
 
 // GET PUBLIC 
-function getPublicCss( string $name ) {
+function getPublicCss( string $name ) 
+{
     return getPath('/public/assets/css/'.$name.'.css');
 }
 
-function getPublicMjs( string $name ) {
+function getPublicMjs( string $name ) 
+{
     return getPath('/private/js/'.$name.'.mjs');
 }
 
-function getPublicJs( string $name ) {
+function getPublicJs( string $name ) 
+{
     return getPath('/public/js/'.$name.'.js');
 }
 
 // GET PRIVATE
-function getPrivateCss( string $name ) {
+function getPrivateCss( string $name ) 
+{
     return getPath('/private/assets/css/'.$name.'.css');
 }
 
-function getPrivateJs( string $name ) {
+function getPrivateJs( string $name ) 
+{
     return getPath('/private/js/'.$name.'.js');
 }
 
-function getPrivateMjs( string $name ) {
+function getPrivateMjs( string $name ) 
+{
     return getPath('/private/js/'.$name.'.mjs');
 }
 
 /**
  * function to get path private and public assets
  */
-function getPrivateAssets( string $name ) {
+function getPrivateAssets( string $name ) 
+{
     return getPath('/private/assets/'.$name);
 }
-function getPublicAssets( string $name ) {
+function getPublicAssets( string $name ) 
+{
     return getPath('/public/assets/'.$name);
 }
 
@@ -61,7 +70,8 @@ function encrypt($str, $method = 'sha256')
 
 
 // Function to redirect 
-function redirectTo( string $path, array $params = null ) {
+function redirectTo( string $path, array $params = null ) 
+{
     try {
         if ( getType( $path) != 'string') {
             throw new Exception(`$path : is not a string`);
@@ -85,7 +95,8 @@ function redirectTo( string $path, array $params = null ) {
 }
 
 // verify users logged
-function isLoged() {
+function isLoged() 
+{
     if ( isset($_SESSION['userId']) )
     {
         return true;
@@ -93,14 +104,16 @@ function isLoged() {
     else return false;
 }
 
-function handleLoginFaild() {
+function handleLoginFaild() 
+{
     $_SESSION['attempt'] = 'Identifiants incorrects';
     $_SESSION['mailSave'] = $_POST['email'];
     unsetLoginPost();
     exit(redirectTo('admin-login'));
 }
 
-function handleLoginSuccess( $user ) {
+function handleLoginSuccess( $user ) 
+{
     if ( isset($_SESSION['mailSave'])) {
         unset($_SESSION['mailSave']);
     }
@@ -110,9 +123,57 @@ function handleLoginSuccess( $user ) {
     exit(redirectTo('admin'));
 }
 
-function unsetLoginPost() {
+function unsetLoginPost() 
+{
     unset($_POST['email']);
     unset($_POST['password']);
+}
+
+// verify mail valide
+function isEmailValide(string $_email, $_allEmail) 
+{
+    if ( !filter_var($_email, FILTER_VALIDATE_EMAIL) ) 
+    {
+        logEvent('EMAIL NON VALIDE');
+        $_SESSION['verifyEmail'] = 'Email non valide';
+        unset($_email);
+        return false;
+    }
+    elseif ( $_allEmail !== null) 
+    {
+        logEvent('EMAIL DEJA UTILISE');
+        $_SESSION['verifyEmail'] = 'Email déjà utilisé';
+        unset($_email);
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+// verify password valide
+function isPasswordValide(string $_password, $_passwordComfirm ) 
+{
+    if ( isset($_password) && (isset($_passwordComfirm)) ) {
+        if ( $_password === $_passwordComfirm ) {
+            if (preg_match('/[0-9]/', $_password)) {
+                if (preg_match('/[a-z]/', $_password)) {
+                    if (preg_match('/[A-Z]/', $_password)) {
+                        return true;
+                    }
+                }
+            }
+            else {
+                $_SESSION['verifyPass'] = 'Le mot de passe doit contenir les carractères (a-z), (0-9), et (A-Z)';
+                return false;
+            }
+        }
+        else {
+            $_SESSION['verifyPass'] = 'le mot de pass et la confirmation ne sont pas identiques';
+            logEvent('pass et confirm pas ok');
+            return false;
+        }  
+    }
 }
 
 /**
@@ -120,13 +181,15 @@ function unsetLoginPost() {
  * @param Type @name
  * @return string breadcrump
  */
-function get_fill_ariane() {
+function get_fill_ariane() 
+{
     $routeName = $GLOBALS['match']['name'];
     $nameArr = explode('-', $routeName);
     return $nameArr;
 }
 
-function build_breadcrump( $path ) {
+function build_breadcrump( $path ) 
+{
     if ( $path === 'admin' ) {
         return 'admin';
     }

@@ -29,15 +29,31 @@ class UsersController extends CoreController
 
     public function updatePost( $id ) {
         $user = Users::findById($id);
-        
+        $checkEmail = Users::findByEmail($_POST['email']);
+        $pass = $_POST['password'];
+
+        logEvent( print_r($checkEmail));
+        // update values
         $user->setFirstName( $_POST['firstName'] );
         $user->setLastName( $_POST['lastName'] );
-        $user->setEmail( $_POST['email'] );
-        $user->setPassword( $_POST['password'] );
         $user->setRole( $_POST['role'] );
         $user->setUpdatedAt( date("Y-m-d H:i:s") );
 
-        // Upadte new values to DB
+        // verify email valide
+        if (isEmailValide($_POST['email'], $checkEmail) === true) {
+            $user->setEmail($_POST['email']);
+        }
+
+        // verify pass valide
+        if (isPasswordValide($_POST['password'], $_POST['passwordConfirm'])) {
+            $pass = $this->saltPepper($_POST['password']);
+            $pass = encrypt($pass);
+            $user->setPassword($pass);
+        }
+
+        // $user->setPassword( $_POST['password'] );
+
+        // Send new values to DB
         if ( $user->update() ) {
             exit(redirectTo('admin-profils-status', ['status' => 'succes']));
         }

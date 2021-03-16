@@ -24,18 +24,14 @@ class Users extends CoreModel
     //===============================
     public static function findByEmail( string $_email )
     {
-        logEvent('findByEmail()');
-        logEvent(Database::string());
         try {
              $pdo = Database::getPDO();
     
             if ( $pdo === null ) {
-                logEvent('PDO EST NUL');
                 exit;
             };
     
             $sql = "SELECT * FROM `". static::$table ."` WHERE `email` = ?";
-            logEvent($sql);
     
             $statement = $pdo->prepare($sql);
             $statement->execute([$_email]);
@@ -94,7 +90,6 @@ class Users extends CoreModel
         $pdo = Database::getPDO();
         $userUpdate = get_object_vars( $this );
         unset( $userUpdate['id'] );
-        unset( $userUpdate['password'] );
         unset( $userUpdate['created_at'] );
 
         $set_arr = [];

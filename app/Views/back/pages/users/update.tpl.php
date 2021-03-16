@@ -24,7 +24,7 @@
                     </div>
                     <div class="item">
                         <span>Confirmer mot de passe</span>
-                        <input type="password" name="password" id="password" placeholder="*****">
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="*****">
                     </div>
                     <div class="item">
                         <span>Rôle</span>
