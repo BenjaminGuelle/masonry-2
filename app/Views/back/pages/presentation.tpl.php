@@ -6,15 +6,17 @@
         ?>
     <div class="board">
         <div class="prez-content">
+        <?php foreach( $presentation as $pres ): ?>
             <div class="prez-picture">
                 image
             </div>
             <div class="prez-numbers">
-                numéro
+                <?= $pres->getCaseC() ?>
             </div>
             <div class="prez-description">
-                description
+                <?= $pres->getDescription() ?>
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
