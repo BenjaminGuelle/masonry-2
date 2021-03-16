@@ -86,11 +86,39 @@ class Users extends CoreModel
         return $modelsArray;
     }
 
+    public function insert() {
+        $pdo = Database::getPDO();
+        $this_arr = get_object_vars( $this );
+        unset( $this_arr['id'] );
+        unset( $this_arr['updated_at'] );
+
+        // key
+        $fields_arr = array_keys($this_arr);
+        $fields_str = implode( "`, `", $fields_arr );
+
+        // values
+        $values_arr = array_fill( 0, count( $fields_arr ), "?" );
+        $values_str = implode( ", ", $values_arr );
+
+        $prepared = $pdo->prepare( 
+            "INSERT INTO `". static::$table ."` (`".$fields_str."`) VALUES (".$values_str.")" 
+        );
+
+        $values = array_values( $this_arr );
+
+        $insertRows = $prepared->execute($values);
+        if ( $insertRows > 0 ) {
+            $this->id = $pdo->lastInsertId();
+            return true;
+        }
+        else return false;
+    }
+
     public function update() {
         $pdo = Database::getPDO();
         $userUpdate = get_object_vars( $this );
         unset( $userUpdate['id'] );
-        unset( $userUpdate['created_at'] );
+        unset( $userUpdate['updated_at'] );
 
         $set_arr = [];
         foreach ( $userUpdate as $field => $values ) {
@@ -109,6 +137,16 @@ class Users extends CoreModel
             return true;
         }
         else return false;
+    }
+
+    public function delete()
+    {
+        $pdo = Database::getPDO();
+        $prepared = $pdo->prepare( 
+            "DELETE FROM `". static::$table ."` WHERE `id` = ?"
+        );
+        $updatedRows = $prepared->execute( [ $this->id ] );
+        return ( $updatedRows > 0 );
     }
 
 
@@ -133,7 +171,8 @@ class Users extends CoreModel
     public function setEmail( string $_email ) { $this->email = $_email; }
     public function setPassword( string $_password ) { $this->password = $_password; }
     public function setRole( string $_role ) { $this->role = $_role; }
+    public function setCreateddAt( string $_createdAt ) { $this->created_at = $_createdAt; }
     public function setUpdatedAt( string $_updatedAt ) { $this->updated_at = $_updatedAt; }
-
+    
 
 }

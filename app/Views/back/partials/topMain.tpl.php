@@ -40,6 +40,10 @@
         <?php endforeach; ?>
     </div>
     <div class="list-buttons">
-        
+		<?php if ( $GLOBALS['match']['name'] === 'admin-profils' ) : ?>
+			<a href="<?= $router->generate('admin-profils-add'); ?>" class="link-to_adduser">
+				Ajouter un membre
+			</a>
+		<?php endif; ?>
     </div>
 </section>

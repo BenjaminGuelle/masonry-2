@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="<?= getPrivateCss('login') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('modal') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('userUpdate') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('userAdd') ?>">
 </head>
 <body>
     <div class="container">

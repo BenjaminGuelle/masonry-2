@@ -32,9 +32,14 @@
 
             <?php foreach( $usersList as $user ): ?>
                 <ul class="items row-users">
-                    <form action="<?= $router->generate('admin-profils-update', [ "id" => $user->getId() ]) ?>" method="GET" class="item-gear get_modal" data-id="<?= $user->getId() ?>">
+                    <form action="<?= $router->generate('admin-profils-update', [ "id" => $user->getId() ]) ?>" method="GET" class="item-gear get_modal">
                         <button type="submit">
                             <img src="<?= getPrivateAssets('images/settings.svg') ?>" alt="logo-update">
+                        </button>
+                    </form>
+                    <form action="<?= $router->generate('admin-profils-delete', [ "id" => $user->getId() ]) ?>" method="POST" class="item-trash get_modal">
+                        <button type="submit">
+                            <img src="<?= getPrivateAssets('images/trash.svg') ?>" alt="logo-delete">
                         </button>
                     </form>
                     <li class="item">

@@ -59,7 +59,18 @@ main .section .board {
 
 /* LIST ACTION BUTTONS */
 main .section .topMain .list-buttons {
-    /* TODO */
+   display: flex;
+   justify-content: flex-end;
+}
+
+/* add user */
+main .section .topMain .list-buttons .link-to_adduser{
+    border: none;
+    background-color: #fbfbff;
+    color: #FA9500;   
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
 }
 
 
@@ -116,11 +127,11 @@ main .section .board .itemslist .row-users .item {
     font-weight: 100;
     overflow-x: auto;
 }
-
+/* BUTTON TO GO UPDATE VIEW */
 main .section .board .itemslist .row-users .item-gear {
     position: absolute;
     top: 15px;
-    left: 10px;
+    left: 15px;
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -148,6 +159,27 @@ main .section .board .itemslist .row-users .item-gear:hover img {
     to {
         transform: rotate(45deg);
     }
+}
+
+/* BUTTON TO DELETE USER */
+main .section .board .itemslist .row-users .item-trash {
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+main .section .board .itemslist .row-users .item-trash button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #fbfbff;
+}
+
+main .section .board .itemslist .row-users .item-trash img {
+    width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -218,7 +250,7 @@ main .section .board .itemslist .row-users .item-gear:hover img {
     main .section .board .itemslist .row-users .item-gear {
         position: absolute;
         top: 15px;
-        left: 15px;
+        left: 28px;
         width: 20px;
         height: 20px;
         cursor: pointer;
@@ -239,5 +271,15 @@ main .section .board .itemslist .row-users .item-gear:hover img {
         to {
             transform: rotate(45deg);
         }
+    }
+
+    /* BUTTON TO DELETE USER */
+    main .section .board .itemslist .row-users .item-trash {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
     }
 }

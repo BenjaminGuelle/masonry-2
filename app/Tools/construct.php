@@ -139,9 +139,10 @@ function isEmailValide(string $_email, $_allEmail)
         unset($_email);
         return false;
     }
-    elseif ( $_allEmail !== null) 
+    elseif ( $_allEmail !== null && $_allEmail !== false ) 
     {
         logEvent('EMAIL DEJA UTILISE');
+        // dump($_allEmail);
         $_SESSION['verifyEmail'] = 'Email déjà utilisé';
         unset($_email);
         return false;
@@ -152,7 +153,7 @@ function isEmailValide(string $_email, $_allEmail)
 }
 
 // verify password valide
-function isPasswordValide(string $_password, $_passwordComfirm ) 
+function isPasswordValide(string $_password, string $_passwordComfirm ) 
 {
     if ( isset($_password) && (isset($_passwordComfirm)) ) {
         if ( $_password === $_passwordComfirm ) {
