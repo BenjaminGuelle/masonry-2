@@ -54,6 +54,8 @@ $router->map('POST', '/Admin/profils/ajout',            'UsersController::addPos
 $router->map('GET',  '/Admin/profils?status=[:status]', 'UsersController::list',        'admin-profils-status'      );
 $router->map('GET',  '/Admin/profils[i:id]/update',     'UsersController::update',      'admin-profils-update'      );
 $router->map('POST', '/Admin/profils[i:id]/update',     'UsersController::updatePost',  'admin-profils-updatePost'  );
+// Routes Presentation
+$router->map('GET',  '/Admin/presentation',             'PrezController::list',        'admin-presentation'         );
 
 // === ERRORS ===
 $router->map(

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?= getPrivateCss('modal') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('userUpdate') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('userAdd') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('prez') ?>">
 </head>
 <body>
     <div class="container">
@@ -54,7 +55,7 @@
                 <a href="#">Galerie</a>
                 <a href="#">Slider</a>
                 <a href="#">Services</a>
-                <a href="#">Présentation</a>
+                <a href="<?= $router->generate('admin-presentation') ?>">Présentation</a>
             </nav>
             <?php endif; ?>
 
