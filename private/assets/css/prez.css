@@ -56,8 +56,15 @@ main .presentation .board .prez-content .form-content .form label span {
 }
 
 /* INPUT FILE DISABLE */
-main .presentation .board .prez-content .form_picture .form input {
-    display: none;
+main .presentation .board .prez-content .form_picture .form .input_hidden {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
 }
 
 /* INPUT ALL FORM */
@@ -150,6 +157,7 @@ main .presentation .board .prez-content .form-content .form button {
     color: #FA9500;
     margin: 10px 0;
     cursor: pointer;
+    outline: none;
 }
 
 main .presentation .board .prez-content .form-content .form button:hover {

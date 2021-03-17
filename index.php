@@ -35,27 +35,29 @@ $router = new AltoRouter();
 $router->setBasePath( BASE_URI );
 
 // === PUBLIC === 
-$router->map('GET',  '/',                               'HomeController::home',         'homepage'                  );
-$router->map('GET',  '/services',                       'ServicesController::list',     'services'                  );
-$router->map('GET',  '/presentation',                   'SocietyController::prez',      'presentation'              );
-$router->map('GET',  '/galerie',                        'GalleryController::list',      'gallery'                   );
+$router->map('GET',  '/',                                   'HomeController::home',             'homepage'                  );
+$router->map('GET',  '/services',                           'ServicesController::list',         'services'                  );
+$router->map('GET',  '/presentation',                       'SocietyController::prez',          'presentation'              );
+$router->map('GET',  '/galerie',                            'GalleryController::list',          'gallery'                   );
 
 // === PRIVATE ===
-$router->map('GET',  '/Admin',                          'AdminController::admin',       'admin'                     );
-$router->map('POST', '/Admin',                          'LoginController::logout',      'admin-logout'              );
+$router->map('GET',  '/Admin',                              'AdminController::admin',           'admin'                     );
+$router->map('POST', '/Admin',                              'LoginController::logout',          'admin-logout'              );
 // Routes Login
-$router->map('GET',  '/Admin/login',                    'LoginController::login',       'admin-login'               );
-$router->map('POST', '/Admin/login',                    'LoginController::loginPost',   'admin-loginPost'           );
+$router->map('GET',  '/Admin/login',                        'LoginController::login',           'admin-login'               );
+$router->map('POST', '/Admin/login',                        'LoginController::loginPost',       'admin-loginPost'           );
 // Routes Users
-$router->map('GET',  '/Admin/profils',                  'UsersController::list',        'admin-profils'             );
-$router->map('POST', '/Admin/profils[i:id]/delete',     'UsersController::delete',      'admin-profils-delete'      );
-$router->map('GET',  '/Admin/profils/ajout',            'UsersController::add',         'admin-profils-add'         );
-$router->map('POST', '/Admin/profils/ajout',            'UsersController::addPost',     'admin-profils-addPost'     );
-$router->map('GET',  '/Admin/profils?status=[:status]', 'UsersController::list',        'admin-profils-status'      );
-$router->map('GET',  '/Admin/profils[i:id]/update',     'UsersController::update',      'admin-profils-update'      );
-$router->map('POST', '/Admin/profils[i:id]/update',     'UsersController::updatePost',  'admin-profils-updatePost'  );
+$router->map('GET',  '/Admin/profils',                      'UsersController::list',            'admin-profils'             );
+$router->map('POST', '/Admin/profils[i:id]/delete',         'UsersController::delete',          'admin-profils-delete'      );
+$router->map('GET',  '/Admin/profils/ajout',                'UsersController::add',             'admin-profils-add'         );
+$router->map('POST', '/Admin/profils/ajout',                'UsersController::addPost',         'admin-profils-addPost'     );
+$router->map('GET',  '/Admin/profils?status=[:status]',     'UsersController::list',            'admin-profils-status'      );
+$router->map('GET',  '/Admin/profils[i:id]/update',         'UsersController::update',          'admin-profils-update'      );
+$router->map('POST', '/Admin/profils[i:id]/update',         'UsersController::updatePost',      'admin-profils-updatePost'  );
 // Routes Presentation
-$router->map('GET',  '/Admin/presentation',             'PresentationController::list', 'admin-presentation'        );
+$router->map('GET',  '/Admin/presentation',                 'PresentationController::list',     'admin-presentation'        );
+$router->map('POST', '/Admin/presentation[i:id]/edit',      'PresentationController::edit',     'admin-presentation-edit'   );
+$router->map('POST', '/Admin/presentation[i:id]/upload',    'PresentationController::upload',   'admin-presentation-upload' );
 
 // === ERRORS ===
 $router->map(

@@ -16,3 +16,11 @@ function isActiveMenuAdmin() {
     }
 };
 
+const inputUpload = document.querySelector('#picture');
+inputUpload.addEventListener('change', handleGetNameFileUpload );
+
+function handleGetNameFileUpload() {
+    const labelTxt = document.querySelector('.picture-upload_presentation');
+    const inputValue = inputUpload.value;
+    console.log(inputValue);
+};

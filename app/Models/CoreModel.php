@@ -111,7 +111,7 @@
             $userUpdate = get_object_vars( $this );
             unset( $userUpdate['id'] );
             unset( $userUpdate['updated_at'] );
-    
+            // dump( $userUpdate );
             $set_arr = [];
             foreach ( $userUpdate as $field => $values ) {
                 $set_arr[] = '`'.$field . "` = ?";
@@ -121,10 +121,13 @@
             $prepared = $pdo->prepare(
                 "UPDATE `". static::$table ."` SET ".$set_str." WHERE `id` = {$this->id}"
             );
+            // dump( $prepared );
     
             $values = array_values($userUpdate);
-            
+            // dump( $values );
             $insertRows = $prepared->execute($values);
+            // dump( $insertRows );
+            // dump( print_r( $insertRows));
             if ( $insertRows > 0 ) {
                 return true;
             }

@@ -9,15 +9,16 @@
         <?php foreach( $presentation as $pres ): ?>
 
             <div class="form-content form_picture">
-                <form action="#" method="POST" name="picture_form" class="form">
+                <form action="<?= $router->generate('admin-presentation-upload', [ "id" => $pres->getId() ]) ?>" method="POST" name="picture_form" class="form">
                     <h3>
                         <span>Image de section de la présentation :</span>
                     </h3>
-                    <label for="picture">
+                    <label for="picture" id="picture-upload_presentation">
                         <img src="<?= getPrivateAssets('/images/upload.svg') ?>" alt="logo to upload">
                         <span>Choisir un fichier</span>
                     </label>
-                    <input id="picture" name="picture" type="file">
+                    <input id="picture" name="picture" type="file" enctype="multipart/form-data" class="input_hidden">
+                    <input id="picture_type" name="picture_type" type="text" value="presentation" class="input_hidden">
                     <button type="submit" name="picture_form">
                         Modifier
                     </button>
@@ -30,11 +31,11 @@
             </div>
 
             <div class="form-content form_title">
-                <form action="#" method="POST" name="title_form" class="form">
+                <form action="<?= $router->generate('admin-presentation-edit', [ "id" => $pres->getId() ]) ?>" method="POST" name="title_form" class="form">
                     <h3>
                         <span>Titre de section de la présentation :</span>
                     </h3>
-                    <input id="title" class="input-txt" name="title" type="text">
+                    <input class="input-txt" name="title" type="text">
                     <button type="submit" name="title_form">
                         Modifier
                     </button>
@@ -49,11 +50,11 @@
             </div>
 
             <div class="form-content form_subtitle">
-                <form action="#" method="POST" name="subtitle_form" class="form">
+                <form action="<?= $router->generate('admin-presentation-edit', [ "id" => $pres->getId() ]) ?>" method="POST" name="subtitle_form" class="form">
                     <h3>
                         <span>Sous-titre de section de la présentation :</span>
                     </h3>
-                    <input id="title" class="input-txt" name="subtitle" type="text">
+                    <input id="subtitle" class="input-txt" name="subtitle" type="text">
                     <button type="submit" name="subtitle_form">
                         Modifier
                     </button>
@@ -68,7 +69,7 @@
             </div>
 
             <div class="form-content form_description">
-                <form action="#" method="POST" name="description_form" class="form">
+                <form action="<?= $router->generate('admin-presentation-edit', [ "id" => $pres->getId() ]) ?>" method="POST" name="description_form" class="form">
                     <h3>
                         <span>Description de section de la présentation :</span>
                     </h3>
@@ -86,7 +87,7 @@
             </div>
 
             <div class="form-content form_boxes">
-                <form action="#" method="POST" name="boxes_form" class="form form-boxes">
+                <form action="<?= $router->generate('admin-presentation-edit', [ "id" => $pres->getId() ]) ?>" method="POST" name="boxes_form" class="form form-boxes">
                     <h3>
                         <span>Boxes numéros A - B - C:</span>
                     </h3>
@@ -95,37 +96,37 @@
                             <span>
                                 Case A numéro :
                             </span>
-                            <input type="number">
+                            <input type="number" name="case_a" value="<?= $pres->getCaseA(); ?>" />
                         </div>
                         <div class="case case-txt">
                             <span>
                                 Case A texte :
                             </span>
-                            <input type="text">
+                            <input type="text" name="case_a_txt" value="<?= $pres->getCaseATxt(); ?>">
                         </div>
                         <div class="case case-num">
                             <span>
                                 Case B numéro :
                             </span>
-                            <input type="number">
+                            <input type="number" name="case_b" value="<?= $pres->getCaseB(); ?>">
                         </div>
                         <div class="case case-txt">
                             <span>
                                 Case B texte :
                             </span>
-                            <input type="text">
+                            <input type="text" name="case_b_txt" value="<?= $pres->getCaseBTxt(); ?>">
                         </div>
                         <div class="case case-num">
                             <span>
                                 Case C numéro :
                             </span>
-                            <input type="number">
+                            <input type="number" name="case_c" value="<?= $pres->getCaseC(); ?>">
                         </div>
                         <div class="case case-txt">
                             <span>
                                 Case C texte :
                             </span>
-                            <input type="text">
+                            <input type="text" name="case_c_txt" value="<?= $pres->getCaseCTxt(); ?>">
                         </div>
 
                     </div>

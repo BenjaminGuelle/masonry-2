@@ -60,7 +60,7 @@ class Presentation extends CoreModel
      */
     public function setSubtitle($subtitle)
     {
-        $this->subTitle = $subTitle;
+        $this->subTitle = $subtitle;
 
         return $this;
     }
