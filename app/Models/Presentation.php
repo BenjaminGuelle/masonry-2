@@ -11,7 +11,7 @@ class Presentation extends CoreModel
     // Proprietes
 
     protected $title;
-    protected $subTitle;
+    protected $subtitle;
     protected $description;
     protected $case_a;
     protected $case_a_txt;
@@ -48,9 +48,9 @@ class Presentation extends CoreModel
     /**
      * Get the value of subTitle
      */
-    public function getSubTitle()
+    public function getSubtitle()
     {
-        return $this->subTitle;
+        return $this->subtitle;
     }
 
     /**
@@ -58,7 +58,7 @@ class Presentation extends CoreModel
      *
      * @return  self
      */
-    public function setSubTitle($subTitle)
+    public function setSubtitle($subtitle)
     {
         $this->subTitle = $subTitle;
 

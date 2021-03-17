@@ -8,23 +8,23 @@
                 <form action="<?= $router->generate('admin-profils-addPost') ?>" method="POST">
                     <div class="item">
                         <span>Prenom</span>
-                        <input type="text" name="firstName" id="firstName" placeholder="votre prénom">
+                        <input type="text" name="firstName" id="firstName" placeholder="votre prénom" required>
                     </div>
                     <div class="item">
                         <span>Nom</span>
-                        <input type="text" name="lastName" id="lastName" placeholder="votre nom">
+                        <input type="text" name="lastName" id="lastName" placeholder="votre nom" required>
                     </div>
                     <div class="item">
                         <span>Email</span>
-                        <input type="email" name="email" id="email" placeholder="votre email">
+                        <input type="email" name="email" id="email" placeholder="votre email" required>
                     </div>
                     <div class="item">
                         <span>Nouveau mot de passe</span>
-                        <input type="password" name="password" id="password" placeholder="votre mot de passe">
+                        <input type="password" name="password" id="password" placeholder="votre mot de passe" required>
                     </div>
                     <div class="item">
                         <span>Confirmer mot de passe</span>
-                        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="confirmer le mot de passe">
+                        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="confirmer le mot de passe" required>
                     </div>
                     <div class="item">
                         <span>Rôle</span>

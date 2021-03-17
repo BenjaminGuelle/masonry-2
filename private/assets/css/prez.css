@@ -1,4 +1,314 @@
 main .presentation .board .prez-content {
     width: 100%;
     height: 100%;
+    overflow-y: auto;
+}
+
+main .presentation .board .prez-content .form-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+/* 
+==================> BOX FORM 
+*/
+main .presentation .board .prez-content .form-content .form {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid #e5e5e5;
+}
+
+main .presentation .board .prez-content .form-content .form h3 span {
+    font-size: 0.9em;
+}
+
+/* LABEL FOR INPUT FILE */
+main .presentation .board .prez-content .form-content .form label {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #FA9500;
+    background-color: #e5e5e5;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+main .presentation .board .prez-content .form-content .form label:hover {
+    background-color: #FA9500;
+    color: #F4F4F4;
+    border-bottom: 2px solid #192229;
+}
+
+main .presentation .board .prez-content .form-content .form label img {
+    width: 30px;
+    height: 30px;
+}
+
+main .presentation .board .prez-content .form-content .form label span {
+    padding-left: 10px;
+}
+
+/* INPUT FILE DISABLE */
+main .presentation .board .prez-content .form_picture .form input {
+    display: none;
+}
+
+/* INPUT ALL FORM */
+main .presentation .board .prez-content .form-content .form .input-txt {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-left: 3px solid #FA9500;
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    outline: none;
+    padding-left: 10px;
+}
+
+/* TEXTAREA */
+main .presentation .board .prez-content .form-content .form .textarea {
+    width: 100%;
+    border: none;
+    border-left: 3px solid #FA9500;
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    outline: none;
+    padding-left: 10px;
+}
+
+/* ALL INPUT BOXES */
+main .presentation .board .prez-content .form-content .form .all_input_boxes {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 10px 0;
+    flex-direction: column;
+}
+
+main .presentation .board .prez-content .form-content .form .all_input_boxes .case {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+main .presentation .board .prez-content .form-content .form .all_input_boxes .case span {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+main .presentation .board .prez-content .form-content .form .all_input_boxes .case span::before {
+    position: absolute;
+    content: '';
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FA9500;
+}
+
+main .presentation .board .prez-content .form-content .form .all_input_boxes .case input {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-left: 3px solid #FA9500;
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    outline: none;
+    padding-left: 10px;
+}
+
+main .presentation .board .prez-content .form-content .form .all_input_boxes .case-txt {
+    
+}
+
+/* BUTTON ACTION TO SUBMIT FORM */
+main .presentation .board .prez-content .form-content .form button {
+    width: 100px;
+    height: 50px;
+    background-color: #192229;
+    border: none;
+    color: #FA9500;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+main .presentation .board .prez-content .form-content .form button:hover {
+    background-color: #FA9500;
+    color: #192229;
+}
+
+/* 
+==================> BOX PREVIEW 
+*/
+main .presentation .board .prez-content .form-content .preview {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #e5e5e5;
+}
+
+/* PREVIEW PICTURE */
+main .presentation .board .prez-content .form-content .preview .picture-preview {
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    background-color: aquamarine;
+}
+
+main .presentation .board .prez-content .form-content .preview .picture-preview img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* PREVIEW H2 */
+main .presentation .board .prez-content .form-content .preview h2 span {
+    position: relative;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+main .presentation .board .prez-content .form-content .preview h2 span:after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 30%;
+    height: 2px;
+    background-color: #E55607;
+}
+
+/* PREVIEW DESCRIPTION */
+main .presentation .board .prez-content .form-content .preview .description {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
+/* PREVIEW BOXES */
+main .presentation .board .prez-content .form-content .form.form-boxes {
+    height: auto;
+}
+
+main .presentation .board .prez-content .form-content .preview .boxes {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .presentation .board .prez-content .form-content .preview .boxes .box {
+    width: calc(100% / 3.5);
+    height: 100px;
+    background-color: #E55607;
+    border-radius: 3px;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .presentation .board .prez-content .form-content .preview .boxes .box .number {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4F4F4;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+main .presentation .board .prez-content .form-content .preview .boxes .box .text {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F4F4F4;
+    font-size: 0.7em;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    main .presentation .board .prez-content .form-content {
+        flex-direction: row;
+    }
+
+    /* BOX FORM */
+    main .presentation .board .prez-content .form-content .form {
+        width: 50%;
+        height: 200px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-left: 4px solid #e5e5e5;
+    }
+
+    main .presentation .board .prez-content .form-content .form h3 span {
+        font-size: 1em;
+    }
+    
+    /* BOX PREVIEW */
+    main .presentation .board .prez-content .form-content .preview {
+        width: 50%;
+        height: 200px;
+        display: flex;
+    }
+
+    /* PREVIEW DESCRIPTION */
+    main .presentation .board .prez-content .form-content .preview .description {
+        width: 60%;
+        height: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+    }
+
+    /* PREVIEW BOXES */
+    main .presentation .board .prez-content .form-content .preview.preview-boxes {
+        width: 50%;
+        height: 350px;
+    }
+
+    main .presentation .board .prez-content .form-content .preview .boxes .box {
+        width: calc(100% / 3.5);
+        height: 150px;
+    }
+
+    main .presentation .board .prez-content .form-content .preview .boxes .box .number {
+        font-size: 5em;
+    }
+    
+    main .presentation .board .prez-content .form-content .preview .boxes .box .text {
+        font-size: 1em;
+    }
+
 }

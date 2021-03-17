@@ -12,8 +12,15 @@ class CoreController
         }
         $routeName = $match['name'];
         $acl = [
-            "admin"         => ['superadmin', 'admin'],
-            "admin-profils" => ['superadmin', 'admin'],
+            "admin"                     => ['superadmin', 'admin'],
+            "admin-profils"             => ['superadmin', 'admin'],
+            "admin-profils-update"      => ['superadmin', 'admin'],
+            "admin-profils-updatePost"  => ['superadmin', 'admin'],
+            "admin-profils-status"      => ['superadmin', 'admin'],
+            "admin-profils-delete"      => ['superadmin', 'admin'],
+            "admin-profils-add"         => ['superadmin', 'admin'],
+            "admin-profils-addPost"     => ['superadmin', 'admin'],
+            "admin-presentation"        => ['superadmin', 'admin'],
         ];
 
         // Verify protected road
