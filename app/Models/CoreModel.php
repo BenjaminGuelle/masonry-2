@@ -147,6 +147,11 @@
             return ( $updatedRows > 0 );
         }
 
+        public function upload()
+        {
+            
+        }
+
         //===============================
         // Getters
         //===============================

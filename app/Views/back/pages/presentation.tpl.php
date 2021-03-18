@@ -9,15 +9,19 @@
         <?php foreach( $presentation as $pres ): ?>
 
             <div class="form-content form_picture">
-                <form action="<?= $router->generate('admin-presentation-upload', [ "id" => $pres->getId() ]) ?>" method="POST" name="picture_form" class="form">
+                <form action="<?= $router->generate('admin-presentation-upload', [ "id" => $pres->getId() ]) ?>" enctype="multipart/form-data" method="POST" name="picture_form" class="form">
                     <h3>
                         <span>Image de section de la présentation :</span>
                     </h3>
-                    <label for="picture" id="picture-upload_presentation">
+                    <label for="fileUpload" id="picture-upload_presentation">
                         <img src="<?= getPrivateAssets('/images/upload.svg') ?>" alt="logo to upload">
                         <span>Choisir un fichier</span>
                     </label>
-                    <input id="picture" name="picture" type="file" enctype="multipart/form-data" class="input_hidden">
+                    <span class="picture_name">
+                        
+                    </span>
+                    <!-- <input type="hidden" name="MAX_FILE_SIZE" value="100000" class="input_hidden"> -->
+                    <input type="file" id="fileUpload" name="picture"  class="input_hidden">
                     <input id="picture_type" name="picture_type" type="text" value="presentation" class="input_hidden">
                     <button type="submit" name="picture_form">
                         Modifier
@@ -25,7 +29,7 @@
                 </form>
                 <div class="preview">
                     <div class="picture-preview">
-                        <img src="#" alt="">
+                        <img src="<?= getPrivateAssets('images/presentation/'.$pres->getPicture()) ?>" alt="">
                     </div>
                 </div>
             </div>

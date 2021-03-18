@@ -1,3 +1,4 @@
+// Function to move menu from left to right screen on mobile screen.
 const btnMenu = document.querySelector('.header-toggle')
 btnMenu.addEventListener('click', isActiveMenuAdmin);
 const sectionAdmin = document.querySelector('.section');
@@ -16,11 +17,11 @@ function isActiveMenuAdmin() {
     }
 };
 
-const inputUpload = document.querySelector('#picture');
+// Function to edit span on upload file => section presentation Admin
+const inputUpload = document.querySelector('#fileUpload');
 inputUpload.addEventListener('change', handleGetNameFileUpload );
 
 function handleGetNameFileUpload() {
-    const labelTxt = document.querySelector('.picture-upload_presentation');
-    const inputValue = inputUpload.value;
-    console.log(inputValue);
+    const spanNamePicture = document.querySelector('.picture_name');
+    spanNamePicture.innerHTML = "Votre fichier :" + inputUpload.value;
 };
