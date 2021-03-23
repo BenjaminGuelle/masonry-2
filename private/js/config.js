@@ -18,7 +18,7 @@ function isActiveMenuAdmin() {
 };
 
 // Function to edit span on upload file => section presentation Admin
-const inputUpload = document.querySelector('#fileUpload');
+const inputUpload = document.querySelector('.input_file');
 inputUpload.addEventListener('change', handleGetNameFileUpload );
 
 function handleGetNameFileUpload() {

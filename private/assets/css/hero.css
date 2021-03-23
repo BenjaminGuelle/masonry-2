@@ -1,0 +1,43 @@
+main .hero .board .hero-content .form-content .hero_box {
+    display: flex;
+    flex-direction: column;
+}
+
+ /* BOX FORM */
+ main .hero .board .hero-content .form-content .form {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    border-left: 4px solid #e5e5e5;
+}
+
+main .hero .board .hero-content .form-content .form .all_input_boxes .case {
+    align-items: flex-start;
+}
+
+/* TEXTAREA */
+main .hero .board .hero-content .form-content .form .textarea {
+    width: 50%;
+    height: auto;
+    border: none;
+    border-left: 3px solid #FA9500;
+    background-color: #F4F4F4;
+    margin: 10px 0;
+    outline: none;
+    padding-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* BOX FORM */
+    main .hero .board .hero-content .form-content .form {
+        width: 50%;
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        border-left: 4px solid #e5e5e5;
+    }
+
+}

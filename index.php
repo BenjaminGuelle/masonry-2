@@ -58,6 +58,10 @@ $router->map('POST', '/Admin/profils[i:id]/update',         'UsersController::up
 $router->map('GET',  '/Admin/presentation',                 'PresentationController::list',     'admin-presentation'        );
 $router->map('POST', '/Admin/presentation[i:id]/edit',      'PresentationController::edit',     'admin-presentation-edit'   );
 $router->map('POST', '/Admin/presentation[i:id]/upload',    'PresentationController::upload',   'admin-presentation-upload' );
+// Route Hero
+$router->map('GET',  '/Admin/hero',                         'HeroController::list',             'admin-hero'                );
+$router->map('POST', '/Admin/hero[i:id]/edit',              'HeroController::edit',             'admin-hero-edit'           );
+$router->map('POST', '/Admin/hero[i:id]/upload',            'HeroController::upload',           'admin-hero-upload'         );
 
 // === ERRORS ===
 $router->map(

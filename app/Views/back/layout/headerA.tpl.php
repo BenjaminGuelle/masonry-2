@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="<?= getPrivateCss('userUpdate') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('userAdd') ?>">
     <link rel="stylesheet" href="<?= getPrivateCss('prez') ?>">
+    <link rel="stylesheet" href="<?= getPrivateCss('hero') ?>">
 </head>
 <body>
     <div class="container">
@@ -48,14 +49,18 @@
             </form>
             <nav>
                 <h2>
-                    <span>Gestion des éléments :</span>
+                    <span>Gestion des éléments : </span>
                 </h2>
                 <a href="<?= $router->generate('admin') ?>">Accueil</a>
                 <a href="<?= $router->generate('admin-profils') ?>">Profils</a>
-                <a href="#">Galerie</a>
-                <a href="#">Slider</a>
-                <a href="#">Services</a>
+                <a href="<?= $router->generate('admin-hero') ?>">Hero</a>
+                <a href="#">Prestations</a>
                 <a href="<?= $router->generate('admin-presentation') ?>">Présentation</a>
+                <a href="#">Contact</a>
+                <a href="#">Page services</a>
+                <a href="#">Page galerie</a>
+                <a href="#">Page présentation</a>
+
             </nav>
             <?php endif; ?>
 

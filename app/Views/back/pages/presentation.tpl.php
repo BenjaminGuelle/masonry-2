@@ -1,15 +1,21 @@
-<section class="presentation section">
+<section class="presentation section views_update">
         <?php
             // On inclut des sous-vues => "partials"
             include __DIR__.'/../partials/modal.tpl.php';
             include __DIR__.'/../partials/topMain.tpl.php';
         ?>
     <div class="board">
-        <div class="prez-content">
+        <div class="prez-content views_update_content">
         <?php foreach( $presentation as $pres ): ?>
 
             <div class="form-content form_picture">
-                <form action="<?= $router->generate('admin-presentation-upload', [ "id" => $pres->getId() ]) ?>" enctype="multipart/form-data" method="POST" name="picture_form" class="form">
+                <form 
+                    action="<?= $router->generate('admin-presentation-upload', [ "id" => $pres->getId() ]) ?>"
+                    enctype="multipart/form-data"
+                    method="POST"
+                    name="picture_form"
+                    class="form"
+                >
                     <h3>
                         <span>Image de section de la présentation :</span>
                     </h3>
@@ -17,11 +23,9 @@
                         <img src="<?= getPrivateAssets('/images/upload.svg') ?>" alt="logo to upload">
                         <span>Choisir un fichier</span>
                     </label>
-                    <span class="picture_name">
-                        
-                    </span>
+                    <span class="picture_name"></span>
                     <!-- <input type="hidden" name="MAX_FILE_SIZE" value="100000" class="input_hidden"> -->
-                    <input type="file" id="fileUpload" name="picture"  class="input_hidden">
+                    <input type="file" id="fileUpload" name="picture"  class="input_file input_hidden">
                     <input id="picture_type" name="picture_type" type="text" value="presentation" class="input_hidden">
                     <button type="submit" name="picture_form">
                         Modifier

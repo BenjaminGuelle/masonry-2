@@ -1,10 +1,10 @@
-main .presentation .board .prez-content {
+main .views_update .board .views_update_content {
     width: 100%;
     height: 100%;
     overflow-y: auto;
 }
 
-main .presentation .board .prez-content .form-content {
+main .views_update .board .views_update_content .form-content {
     width: 100%;
     height: auto;
     display: flex;
@@ -14,7 +14,7 @@ main .presentation .board .prez-content .form-content {
 /* 
 ==================> BOX FORM 
 */
-main .presentation .board .prez-content .form-content .form {
+main .views_update .board .views_update_content .form-content .form {
     width: 100%;
     height: 200px;
     padding: 10px;
@@ -23,12 +23,12 @@ main .presentation .board .prez-content .form-content .form {
     border-left: 4px solid #e5e5e5;
 }
 
-main .presentation .board .prez-content .form-content .form h3 span {
+main .views_update .board .views_update_content .form-content .form h3 span {
     font-size: 0.9em;
 }
 
 /* LABEL FOR INPUT FILE */
-main .presentation .board .prez-content .form-content .form label {
+main .views_update .board .views_update_content .form-content .form label {
     width: 200px;
     height: 50px;
     display: flex;
@@ -40,23 +40,28 @@ main .presentation .board .prez-content .form-content .form label {
     cursor: pointer;
 }
 
-main .presentation .board .prez-content .form-content .form label:hover {
+main .views_update .board .views_update_content .form-content .form label:hover {
     background-color: #FA9500;
     color: #F4F4F4;
     border-bottom: 2px solid #192229;
 }
 
-main .presentation .board .prez-content .form-content .form label img {
+main .views_update .board .views_update_content .form-content .form label img {
     width: 30px;
     height: 30px;
 }
 
-main .presentation .board .prez-content .form-content .form label span {
+main .views_update .board .views_update_content .form-content .form label span {
     padding-left: 10px;
+}
+main .views_update .board .views_update_content .form-content .form .picture_name {
+    width: 100%;
+    height: 30px;
+    color: #16A085;
 }
 
 /* INPUT FILE DISABLE */
-main .presentation .board .prez-content .form_picture .form .input_hidden {
+main .views_update .board .views_update_content .form_picture .form .input_hidden {
     position: absolute;
     visibility: hidden;
     top: 0;
@@ -68,7 +73,7 @@ main .presentation .board .prez-content .form_picture .form .input_hidden {
 }
 
 /* INPUT ALL FORM */
-main .presentation .board .prez-content .form-content .form .input-txt {
+main .views_update .board .views_update_content .form-content .form .input-txt {
     width: 100%;
     height: 50px;
     display: flex;
@@ -83,7 +88,7 @@ main .presentation .board .prez-content .form-content .form .input-txt {
 }
 
 /* TEXTAREA */
-main .presentation .board .prez-content .form-content .form .textarea {
+main .views_update .board .views_update_content .form-content .form .textarea {
     width: 100%;
     border: none;
     border-left: 3px solid #FA9500;
@@ -94,7 +99,7 @@ main .presentation .board .prez-content .form-content .form .textarea {
 }
 
 /* ALL INPUT BOXES */
-main .presentation .board .prez-content .form-content .form .all_input_boxes {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes {
     width: 100%;
     height: auto;
     display: flex;
@@ -102,7 +107,7 @@ main .presentation .board .prez-content .form-content .form .all_input_boxes {
     flex-direction: column;
 }
 
-main .presentation .board .prez-content .form-content .form .all_input_boxes .case {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes .case {
     width: 100%;
     height: 40px;
     display: flex;
@@ -110,7 +115,7 @@ main .presentation .board .prez-content .form-content .form .all_input_boxes .ca
     margin-bottom: 5px;
 }
 
-main .presentation .board .prez-content .form-content .form .all_input_boxes .case span {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes .case span {
     position: relative;
     width: 50%;
     height: 100%;
@@ -119,7 +124,7 @@ main .presentation .board .prez-content .form-content .form .all_input_boxes .ca
     padding-left: 20px;
 }
 
-main .presentation .board .prez-content .form-content .form .all_input_boxes .case span::before {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes .case span::before {
     position: absolute;
     content: '';
     top: 15px;
@@ -130,7 +135,7 @@ main .presentation .board .prez-content .form-content .form .all_input_boxes .ca
     background-color: #FA9500;
 }
 
-main .presentation .board .prez-content .form-content .form .all_input_boxes .case input {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes .case input {
     width: 50%;
     height: 100%;
     display: flex;
@@ -144,12 +149,12 @@ main .presentation .board .prez-content .form-content .form .all_input_boxes .ca
     padding-left: 10px;
 }
 
-main .presentation .board .prez-content .form-content .form .all_input_boxes .case-txt {
+main .views_update .board .views_update_content .form-content .form .all_input_boxes .case-txt {
     
 }
 
 /* BUTTON ACTION TO SUBMIT FORM */
-main .presentation .board .prez-content .form-content .form button {
+main .views_update .board .views_update_content .form-content .form button {
     width: 100px;
     height: 50px;
     background-color: #192229;
@@ -160,7 +165,7 @@ main .presentation .board .prez-content .form-content .form button {
     outline: none;
 }
 
-main .presentation .board .prez-content .form-content .form button:hover {
+main .views_update .board .views_update_content .form-content .form button:hover {
     background-color: #FA9500;
     color: #192229;
 }
@@ -168,7 +173,7 @@ main .presentation .board .prez-content .form-content .form button:hover {
 /* 
 ==================> BOX PREVIEW 
 */
-main .presentation .board .prez-content .form-content .preview {
+main .views_update .board .views_update_content .form-content .preview {
     width: 100%;
     height: 200px;
     display: flex;
@@ -178,26 +183,26 @@ main .presentation .board .prez-content .form-content .preview {
 }
 
 /* PREVIEW PICTURE */
-main .presentation .board .prez-content .form-content .preview .picture-preview {
+main .views_update .board .views_update_content .form-content .preview .picture-preview {
     width: 200px;
     height: 100%;
     overflow: hidden;
     background-color: aquamarine;
 }
 
-main .presentation .board .prez-content .form-content .preview .picture-preview img {
+main .views_update .board .views_update_content .form-content .preview .picture-preview img {
     width: 100%;
     object-fit: cover;
 }
 
 /* PREVIEW H2 */
-main .presentation .board .prez-content .form-content .preview h2 span {
+main .views_update .board .views_update_content .form-content .preview h2 span {
     position: relative;
     font-size: 1.3em;
     font-weight: 700;
 }
 
-main .presentation .board .prez-content .form-content .preview h2 span:after {
+main .views_update .board .views_update_content .form-content .preview h2 span:after {
     position: absolute;
     content: '';
     bottom: -5px;
@@ -208,7 +213,7 @@ main .presentation .board .prez-content .form-content .preview h2 span:after {
 }
 
 /* PREVIEW DESCRIPTION */
-main .presentation .board .prez-content .form-content .preview .description {
+main .views_update .board .views_update_content .form-content .preview .description {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -218,11 +223,11 @@ main .presentation .board .prez-content .form-content .preview .description {
 }
 
 /* PREVIEW BOXES */
-main .presentation .board .prez-content .form-content .form.form-boxes {
+main .views_update .board .views_update_content .form-content .form.form-boxes {
     height: auto;
 }
 
-main .presentation .board .prez-content .form-content .preview .boxes {
+main .views_update .board .views_update_content .form-content .preview .boxes {
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -231,7 +236,7 @@ main .presentation .board .prez-content .form-content .preview .boxes {
     align-items: center;
 }
 
-main .presentation .board .prez-content .form-content .preview .boxes .box {
+main .views_update .board .views_update_content .form-content .preview .boxes .box {
     width: calc(100% / 3.5);
     height: 100px;
     background-color: #E55607;
@@ -241,7 +246,7 @@ main .presentation .board .prez-content .form-content .preview .boxes .box {
     flex-direction: column;
 }
 
-main .presentation .board .prez-content .form-content .preview .boxes .box .number {
+main .views_update .board .views_update_content .form-content .preview .boxes .box .number {
     width: 100%;
     height: 60%;
     display: flex;
@@ -252,7 +257,7 @@ main .presentation .board .prez-content .form-content .preview .boxes .box .numb
     font-weight: 700;
 }
 
-main .presentation .board .prez-content .form-content .preview .boxes .box .text {
+main .views_update .board .views_update_content .form-content .preview .boxes .box .text {
     width: 100%;
     height: 40%;
     display: flex;
@@ -265,12 +270,12 @@ main .presentation .board .prez-content .form-content .preview .boxes .box .text
 }
 
 @media screen and (min-width: 1024px) {
-    main .presentation .board .prez-content .form-content {
+    main .views_update .board .views_update_content .form-content {
         flex-direction: row;
     }
 
     /* BOX FORM */
-    main .presentation .board .prez-content .form-content .form {
+    main .views_update .board .views_update_content .form-content .form {
         width: 50%;
         height: 200px;
         padding: 10px;
@@ -279,19 +284,19 @@ main .presentation .board .prez-content .form-content .preview .boxes .box .text
         border-left: 4px solid #e5e5e5;
     }
 
-    main .presentation .board .prez-content .form-content .form h3 span {
+    main .views_update .board .views_update_content .form-content .form h3 span {
         font-size: 1em;
     }
     
     /* BOX PREVIEW */
-    main .presentation .board .prez-content .form-content .preview {
+    main .views_update .board .views_update_content .form-content .preview {
         width: 50%;
         height: 200px;
         display: flex;
     }
 
     /* PREVIEW DESCRIPTION */
-    main .presentation .board .prez-content .form-content .preview .description {
+    main .views_update .board .views_update_content .form-content .preview .description {
         width: 60%;
         height: 100%;
         padding: 0;
@@ -301,21 +306,21 @@ main .presentation .board .prez-content .form-content .preview .boxes .box .text
     }
 
     /* PREVIEW BOXES */
-    main .presentation .board .prez-content .form-content .preview.preview-boxes {
+    main .views_update .board .views_update_content .form-content .preview.preview-boxes {
         width: 50%;
         height: 350px;
     }
 
-    main .presentation .board .prez-content .form-content .preview .boxes .box {
+    main .views_update .board .views_update_content .form-content .preview .boxes .box {
         width: calc(100% / 3.5);
         height: 150px;
     }
 
-    main .presentation .board .prez-content .form-content .preview .boxes .box .number {
+    main .views_update .board .views_update_content .form-content .preview .boxes .box .number {
         font-size: 5em;
     }
     
-    main .presentation .board .prez-content .form-content .preview .boxes .box .text {
+    main .views_update .board .views_update_content .form-content .preview .boxes .box .text {
         font-size: 1em;
     }
 
