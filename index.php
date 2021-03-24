@@ -62,7 +62,13 @@ $router->map('POST', '/Admin/presentation[i:id]/upload',    'PresentationControl
 $router->map('GET',  '/Admin/hero',                         'HeroController::list',             'admin-hero'                );
 $router->map('POST', '/Admin/hero[i:id]/edit',              'HeroController::edit',             'admin-hero-edit'           );
 $router->map('POST', '/Admin/hero[i:id]/upload',            'HeroController::upload',           'admin-hero-upload'         );
-
+// Route Services
+$router->map('GET',  '/Admin/services',                     'ServicesController::list',         'admin-services'            );
+$router->map('POST', '/Admin/services[i:id]/edit',          'ServicesController::edit',         'admin-services-edit'       );
+$router->map('POST', '/Admin/services[i:id]/upload',        'ServicesController::upload',       'admin-services-upload'     );
+// Route Contact
+$router->map('GET',  '/Admin/contact',                     'ContactController::list',           'admin-contact'             );
+$router->map('POST', '/Admin/contact[i:id]/edit',          'ContactController::edit',           'admin-contact-edit'        );
 // === ERRORS ===
 $router->map(
     'GET', '/error',      'ErrorController::error404',  'error'

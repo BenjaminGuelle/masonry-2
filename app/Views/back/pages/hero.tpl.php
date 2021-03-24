@@ -9,7 +9,7 @@
         <?php foreach ($heros as $hero) : ?>
             <div class="form-content form_picture">
                 <form 
-                    action="#"
+                    action="<?= $router->generate('admin-hero-upload', [ "id" => $hero->getId() ]) ?>"
                     enctype="multipart/form-data"
                     method="POST"
                     name="picture_form"

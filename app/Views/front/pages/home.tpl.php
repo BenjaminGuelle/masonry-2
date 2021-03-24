@@ -4,26 +4,28 @@
                 <img src="public/assets/images/backgroundhero.svg" alt="background">
             </div>
             <div class="hero-content">
-                <div class="hero-top hero-box">
-                    <h2>SARL Stéphane Michel</h2>
-                    <h3>Artisan Maçon</h3>
-                    <div class="hero-text">
-                        Depuis 7 générations, l’expérience et le savoir faire sont transmis de père en fils.
+                <?php foreach ($heros as $hero): ?>
+                    <div class="hero-top hero-box">
+                        <h2><?= $hero->getTitleA() ?></h2>
+                        <h3><?= $hero->getSubtitleA() ?></h3>
+                        <div class="hero-text">
+                            <?= $hero->getDescriptionA() ?>
+                        </div>
+                        <a href="<?= $router->generate( 'presentation' ) ?>" class="link-hero">
+                            Découvrez nous
+                        </a>
                     </div>
-                    <a href="<?= $router->generate( 'presentation' ) ?>" class="link-hero">
-                        Découvrez nous
-                    </a>
-                </div>
-                <div class="hero-bot hero-box">
-                    <h2>Notre savoir faire, nos compétences</h2>
-                    <h3>Construction, rénovation, tous travaux</h3>
-                    <div class="hero-text">
-                        Proféssionnel du batiment, nous saurons vous accompagner pour vos projets.
+                    <div class="hero-bot hero-box">
+                        <h2><?= $hero->getTitleB() ?></h2>
+                        <h3><?= $hero->getSubtitleB() ?></h3>
+                        <div class="hero-text">
+                            <?= $hero->getDescriptionB() ?>
+                        </div>
+                        <a href="#contact" class="link-hero">
+                            Demandez un devis
+                        </a>
                     </div>
-                    <a href="#contact" class="link-hero">
-                        Demandez un devis
-                    </a>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
 
@@ -105,35 +107,46 @@
                     <img src="public/assets/images/worker.jpg" alt="photo Stéphane Michel">
                 </div>
                 <div class="prez-bot">
+                <?php foreach ($presentation as $item) :?>
                     <div class="box-number">
                         <div class="box">
-                            <span>30</span>
-                            <span>Années d'expérience</span>
+                            <span>
+                                <?= $item->getCaseA() ?>
+                            </span>
+                            <span>
+                                <?= $item->getCaseATxt() ?>
+                            </span>
                         </div>
                         <div class="box">
-                            <span>168</span>
-                            <span>Projets réalisés</span>
+                            <span>
+                                <?= $item->getCaseB() ?>
+                            </span>
+                            <span>
+                                <?= $item->getCaseBTxt() ?>
+                            </span>
                         </div>
                         <div class="box">
-                            <span>79</span>
-                            <span>Clients</span>
+                            <span>
+                                <?= $item->getCaseC() ?>
+                            </span>
+                            <span>
+                                <?= $item->getCaseCTxt() ?>
+                            </span>
                         </div>
                     </div>
                     <div class="prez-description">
-                        <h2>SARL Stéphane Michel</h2>
-                        <h3>Plus de 30 ans d'expérience</h3>
+                        <h2><?= $item->getTitle() ?></h2>
+                        <h3><?= $item->getSubtitle() ?></h3>
                         <div class="prez-txt">
                             <span>
-                                Notre équipe de professionnel du bâtiment intervient chez les particuliers et les professionnels afin d'étudier leurs projets et de les réaliser.
-                            </span>
-                            <span>
-                                Toute l'expérience et le savoir faire de notre équipe est mis à disposition des projets les plus complexes et techniques.
+                                <?= $item->getDescription() ?>
                             </span>
                         </div>
                         <a href="<?= $router->generate( 'presentation' ) ?>" class="link-prez">
                             Découvrez nous
                         </a>
                     </div>
+                <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -204,30 +217,32 @@
         <section id="contact" class="contact container">
             <div class="contact-content">
                 <div class="infos">
-                    <h2>Contactez nous!</h2>
+                <?php foreach ($contact as $item): ?>
+                    <h2><?= $item->getTitle() ?></h2>
                     <div class="contact-txt">
-                        Pour toute demande de renseignements ou demande de devis, n'hésitez à nous contacter, nous vous répondrons dans les plus bref délais.
+                        <?= $item->getDescription() ?>
                     </div>
                     <div class="contact-links">
                         <div class="link telephone">
                             <div class="contact-link_logo">
                                 <img src="public/assets/images/logoContact/tel.png" alt="logo-tel">
                             </div>
-                            <span>06 41 79 66 65</span>
+                            <span><?= $item->getMobile() ?></span>
                         </div>
                         <div class="link mail">
                             <div class="contact-link_logo">
                                 <img src="public/assets/images/logoContact/letter.png" alt="logo-mail">
                             </div>
-                            <span>sarl.michel.stephane@gmail.com</span>
+                            <span><?= $item->getMail() ?></span>
                         </div>
                         <div class="link adress">
                             <div class="contact-link_logo">
                                 <img src="public/assets/images/logoContact/location.png" alt="logo-adress">
                             </div>
-                            <span>14 Rue Grand Veneur, 14930 Maltot.</span>
+                            <span><?= $item->getAdress() ?></span>
                         </div>
                     </div>
+                <?php endforeach; ?>
                 </div>
                 <form action="#" method="POST" class="form-contact">
                     <input type="text" id="name" placeholder="Votre nom">

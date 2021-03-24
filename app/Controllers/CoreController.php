@@ -12,15 +12,26 @@ class CoreController
         }
         $routeName = $match['name'];
         $acl = [
-            "admin"                     => ['superadmin', 'admin'],
-            "admin-profils"             => ['superadmin', 'admin'],
-            "admin-profils-update"      => ['superadmin', 'admin'],
-            "admin-profils-updatePost"  => ['superadmin', 'admin'],
-            "admin-profils-status"      => ['superadmin', 'admin'],
-            "admin-profils-delete"      => ['superadmin', 'admin'],
-            "admin-profils-add"         => ['superadmin', 'admin'],
-            "admin-profils-addPost"     => ['superadmin', 'admin'],
-            "admin-presentation"        => ['superadmin', 'admin'],
+            "admin"                         => ['superadmin', 'admin'],
+            "admin-profils"                 => ['superadmin', 'admin'],
+            "admin-profils-update"          => ['superadmin', 'admin'],
+            "admin-profils-updatePost"      => ['superadmin', 'admin'],
+            "admin-profils-status"          => ['superadmin', 'admin'],
+            "admin-profils-delete"          => ['superadmin', 'admin'],
+            "admin-profils-add"             => ['superadmin', 'admin'],
+            "admin-profils-addPost"         => ['superadmin', 'admin'],
+            "admin-presentation"            => ['superadmin', 'admin'],
+            "admin-presentation-edit"       => ['superadmin', 'admin'],
+            "admin-presentation-upload"     => ['superadmin', 'admin'],
+            "admin-hero"                    => ['superadmin', 'admin'],
+            "admin-hero-edit"               => ['superadmin', 'admin'],
+            "admin-hero-upload"             => ['superadmin', 'admin'],
+            "admin-services"                => ['superadmin', 'admin'],
+            "admin-services-edit"           => ['superadmin', 'admin'],
+            "admin-services-upload"         => ['superadmin', 'admin'],
+            "admin-contact"                 => ['superadmin', 'admin'],
+            "admin-contact-edit"            => ['superadmin', 'admin'],
+            
         ];
 
         // Verify protected road

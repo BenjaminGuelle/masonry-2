@@ -54,9 +54,9 @@
                 <a href="<?= $router->generate('admin') ?>">Accueil</a>
                 <a href="<?= $router->generate('admin-profils') ?>">Profils</a>
                 <a href="<?= $router->generate('admin-hero') ?>">Hero</a>
-                <a href="#">Prestations</a>
+                <a href="<?= $router->generate('admin-services') ?>">Services</a>
                 <a href="<?= $router->generate('admin-presentation') ?>">Présentation</a>
-                <a href="#">Contact</a>
+                <a href="<?= $router->generate('admin-contact') ?>">Contact</a>
                 <a href="#">Page services</a>
                 <a href="#">Page galerie</a>
                 <a href="#">Page présentation</a>

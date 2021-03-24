@@ -55,5 +55,46 @@ class HeroController extends CoreController
         }
     }
 
+    public function upload($_id)
+    {
+        // dump($_FILES);
+        logEvent('UPLOAD');
+        logEvent( $_FILES['picture']['name']);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            
+            if (isset($_FILES['picture']) && $_FILES['picture']['error'] == 0) {
+                $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png", "svg" => "image/svg");
+                $filename = $_FILES["picture"]["name"];
+                $filetype = $_FILES["picture"]["type"];
+                $filesize = $_FILES["picture"]["size"];
+
+                // TEST : format de fichier upload
+                $extension = pathinfo($filename, PATHINFO_EXTENSION);
+                if (!array_key_exists($extension, $allowed)) {
+                    die('Erreur, choisir un autre format de fichier valide.');
+                }
+
+                // TEST : taille du fichier upload
+                // $maxSizeFile = undefined;
+                // if ($filesize > $maxSizeFile) {
+                //     die('Erreur, fichier trop volumineu.');
+                // }
+                $privatePathFiles = './private/assets/images/hero/';
+                $publicPathFiles = './public/assets/images/home/';
+                if (file_exists($privatePathFiles.$filename)) {
+                    logEvent($filename.' existe déjà.');
+                }
+                else {
+                    move_uploaded_file($_FILES["picture"]["tmp_name"], $privatePathFiles.$_FILES["picture"]["name"]);
+                    $this->edit($_id);
+                }
+            }
+            else {
+                logError('Error: probleme avec le fichier');
+                logError($_FILES['picture']['error']);
+            }
+        }
+    }
+
     
 }
