@@ -12,3 +12,14 @@ function isActiveMenu() {
         btnMenu.classList.add('active');
     }
 }
+
+const btnViewUp = document.querySelector('.up');
+btnViewUp.addEventListener('click', handleBackUpSite);
+
+function handleBackUpSite() {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+        });
+}

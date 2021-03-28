@@ -181,6 +181,7 @@ header .up {
     /* view UP */
     header .up {
         position: absolute;
+        z-index: 10;
         bottom: -675px;
         right: 10px;
         width: 60px;
@@ -190,6 +191,7 @@ header .up {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     
     header .up img {

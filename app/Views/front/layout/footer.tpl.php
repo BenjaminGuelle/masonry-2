@@ -14,7 +14,7 @@
             <div class="horraire content">
                 <h3>
                     <img src="public/assets/images/logoFooter/time-left.svg" alt="logo-horraires">
-                    <span>Horraires d'ouverture</span>
+                    <span>Horaires d'ouverture</span>
                 </h3>
                 <span>Lun-Ven 08h-12h / 13h-17h</span>
                 <span>Sam-Dim Fermé</span>

@@ -58,9 +58,9 @@
         <a href="tel:0641796665" class="phonefaster">
             <img src="public/assets/images/logoContact/tel.png" alt="phone">
         </a>
-        <a href="http://localhost/masonry-2#hero" class="up">
+        <div class="up">
             <img src="public/assets/images/up-arrow.svg" alt="up">
-        </a>
+        </div>
     </header>
 
     <main>
