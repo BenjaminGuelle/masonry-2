@@ -1,6 +1,3 @@
-const btnMenu = document.querySelector('.menu')
-btnMenu.addEventListener('click', isActiveMenu);
-
 function isActiveMenu() {
     const navMobile = document.querySelector('.nav-mobile');
     if ( navMobile.classList.contains('active') ) {
@@ -13,9 +10,6 @@ function isActiveMenu() {
     }
 }
 
-const btnViewUp = document.querySelector('.up');
-btnViewUp.addEventListener('click', handleBackUpSite);
-
 function handleBackUpSite() {
     window.scrollTo({
         top: 0,
@@ -23,3 +17,15 @@ function handleBackUpSite() {
         behavior: 'smooth'
         });
 }
+
+function getBtnMenu() {
+    return typeof document == 'undefined' ? null : document.querySelector('.menu');
+}
+function getBtnUp() {
+    return typeof document == 'undefined' ? null : document.querySelector('.up');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    getBtnMenu() &&  getBtnMenu().addEventListener('click', isActiveMenu);
+    getBtnUp() &&  getBtnUp().addEventListener('click', handleBackUpSite);
+});

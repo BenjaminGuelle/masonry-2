@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARL Stéphane MICHEL</title>
+<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SARL MICHEL Stéphane</title>
+    <meta name="description"
+        content="Entreprise SARL Michel Stéphane, spécialisée dans la maçonnerie, la construction et la rénovation.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title"
+        content="SARL MICHEL Stéphane : maçonnerie, rénovation, construction.">
+    <meta property="og:description"
+        content="Artisan MICHEL Stéphane : nous accompagnons nos clients dans la réalisations de leurs projets de maçonnerie, construction et rénovation de l'habitat.">
+    <meta property="og:url" content="https://maconnerie-michel-stephane.fr/">
+    <meta property="og:site_name" content="Maçonnerie MICHEL Stéphane">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description"
+        content="Artisan MICHEL Stéphane : nous accompagnons nos clients dans la réalisations de leurs projets de maçonnerie, construction et rénovation de l'habitat.">
+    <meta name="twitter:title"
+        content="SARL MICHEL Stéphane : maçonnerie, rénovation, construction.">
+    <meta name="twitter:site" content="@Michel_stephane">
+    <meta name="twitter:image"
+        content="/public/assets/images/logologo.svg">
+    <meta name="twitter:creator" content="@Michel_stephane">
+    <meta name="msapplication-TileImage"
+        content="/public/assets/images/logologo.svg">
+    <link rel="icon" href="/public/assets/images/logologo.svg" type="image/svg">
+    <!--<link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous">-->
+    <meta name="theme-color" content="#F4F4F4">
+    <link rel="apple-touch-icon" sizes="48x48" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="72x72" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="96x96" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="144x144" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="192x192" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="256x256" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="384x384" href="/public/assets/images/logologo.svg">
+    <link rel="apple-touch-icon" sizes="512x512" href="/public/assets/images/logologo.svg">
 
     <!-- Link font  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
