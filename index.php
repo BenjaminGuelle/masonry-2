@@ -2,6 +2,7 @@
 
 require_once __DIR__. '/vendor/autoload.php';
 require_once __DIR__. '/app/Tools/construct.php';
+require_once __DIR__. '/app/Tools/sendMail.php';
 require_once __DIR__. '/app/Tools/log.php';
 
 initLogs(time());
@@ -22,6 +23,15 @@ $request_uri = $_SERVER['REQUEST_URI'];
 $script_name = $_SERVER['SCRIPT_NAME'];
 $php_self = $_SERVER['PHP_SELF'];
 
+date_default_timezone_set('Europe/Paris');
+setlocale(LC_TIME, "fr_FR");
+if ($_POST === null) 
+{
+    $req_body = file_get_contents('php://input');
+    $_POST = json_decode($req_body, true);   
+}
+// dump($_POST);
+
 $mode = (($http_host == $server_name) && $server_name == "localhost") ? "development" : "production";
 
 $url_particle = $mode == "development" ? "/masonry-2" : "";
@@ -39,6 +49,7 @@ $router->map('GET',  '/',                                   'HomeController::hom
 $router->map('GET',  '/services',                           'ServicesController::list',         'services'                  );
 $router->map('GET',  '/presentation',                       'SocietyController::prez',          'presentation'              );
 $router->map('GET',  '/galerie',                            'GalleryController::list',          'gallery'                   );
+$router->map('POST', '/',                                   'ContactController::mangageMailContact',      'contact-post'              );
 
 // === PRIVATE ===
 $router->map('GET',  '/Admin',                              'AdminController::admin',           'admin'                     );

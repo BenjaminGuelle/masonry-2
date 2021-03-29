@@ -1,7 +1,7 @@
       <!-- section hero  -->
         <section id="hero" class="hero container">
             <div class="background-hero">
-                <img src="public/assets/images/backgroundhero.svg" alt="background">
+                <img src="<?= getPublicAssets('/images/home/house.jpg') ?>" alt="background">
             </div>
             <div class="hero-content">
                 <?php foreach ($heros as $hero): ?>
@@ -56,7 +56,7 @@
 
                         <div class="card">
                             <div class="card-img">
-                                <img src="public/assets/images/construction.jpg" alt="services1">
+                                <img src="<?= getPublicAssets('/images/home/realisation.jpg') ?>" alt="services1">
                             </div>
                             <div class="card-title">
                                 <h3>Réalisation</h3>
@@ -75,7 +75,7 @@
 
                         <div class="card">
                             <div class="card-img">
-                                <img src="public/assets/images/renovation.jpg" alt="services2">
+                                <img src="<?= getPublicAssets('/images/home/renovation.jpeg') ?>" alt="services2">
                             </div>
                             <div class="card-title">
                                 <h3>Rénovation</h3>
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="banner">
-                <img src="public/assets/images/bannerServices.svg" alt="image services">
+                <img src="<?= getPublicAssets('/images/home/banner.jpg') ?>" alt="image services">
             </div>
         </section>
 
@@ -104,7 +104,7 @@
         <section class="prez container">
             <div class="prez-content">
                 <div class="prez-top">
-                    <img src="public/assets/images/worker.jpg" alt="photo Stéphane Michel">
+                    <img src="<?= getPublicAssets('/images/home/worker.jpg') ?>" alt="photo Stéphane Michel">
                 </div>
                 <div class="prez-bot">
                 <?php foreach ($presentation as $item) :?>
@@ -225,33 +225,41 @@
                     <div class="contact-links">
                         <div class="link telephone">
                             <div class="contact-link_logo">
-                                <img src="public/assets/images/logoContact/tel.png" alt="logo-tel">
+                                <img src="<?= getPublicAssets('images/logoContact/tel.png') ?>" alt="logo-tel">
                             </div>
                             <span><?= $item->getMobile() ?></span>
                         </div>
                         <div class="link mail">
                             <div class="contact-link_logo">
-                                <img src="public/assets/images/logoContact/letter.png" alt="logo-mail">
+                                <img src="<?= getPublicAssets('images/logoContact/letter.png') ?>" alt="logo-mail">
                             </div>
                             <span><?= $item->getMail() ?></span>
                         </div>
                         <div class="link adress">
                             <div class="contact-link_logo">
-                                <img src="public/assets/images/logoContact/location.png" alt="logo-adress">
+                                <img src="<?= getPublicAssets('images/logoContact/location.png') ?>" alt="logo-adress">
                             </div>
                             <span><?= $item->getAdress() ?></span>
                         </div>
                     </div>
                 <?php endforeach; ?>
                 </div>
-                <form action="#" method="POST" class="form-contact">
-                    <input type="text" id="name" placeholder="Votre nom">
-                    <input type="tel" id="tel" placeholder="Votre numéro de contact">
-                    <input type="email" id="email" placeholder="Votre email">
-                    <input type="text" id="message" placeholder="Votre demande">
-                    <button type="button">
+                <form action="<?= $router->generate( 'contact-post' ) ?>" method="POST" class="form-contact">
+                    <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                    <input type="tel" name="tel" id="tel" placeholder="Votre numéro de contact" required>
+                    <input type="email" name="email" id="email" placeholder="Votre email" required>
+                    <textarea type="text" name="message" id="message" placeholder="Votre demande" required></textarea> 
+                    <button type="submit">
                         Envoyer
                     </button>
+                    <span styles="color:red">
+                    <?php 
+                        if (isset($_SESSION['sendedMail']))
+                        {
+                            return $_SESSION['sendedMail'];
+                        }
+                    ?>
+                    </span>
                 </form>
             </div>
         </section>

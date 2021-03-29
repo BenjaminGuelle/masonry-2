@@ -51,4 +51,17 @@ class ContactController extends CoreController
             exit(redirectTo('admin-contact', ['status' => 'errors']));
         }
     }
+
+    public function mangageMailContact()
+    {
+        $mailPro = 'sarl.michel.stephane@gmail.com';
+        $mailClient = $_POST['email'];
+        // mail to customer =>
+        tryMail($mailClient, 'to-client');
+        // mail to society =>
+        tryMail($mailPro, 'to-pro');
+        unset($_POST);
+        redirectTo('homepage');
+
+    }
 }

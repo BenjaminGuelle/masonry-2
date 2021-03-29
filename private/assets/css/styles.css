@@ -21,6 +21,10 @@ body .container {
     display: flex;
 }
 
+textarea {
+    white-space: pre-line;
+}
+
 /* HEADER TOGGLE ON MOBILE */
 header .header-toggle {
     position: absolute;

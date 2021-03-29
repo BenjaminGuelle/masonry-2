@@ -79,9 +79,7 @@
                                 rows="5"
                                 cols="33"
                                 value="<?= $hero->getDescriptionA() ?>"
-                            >
-                            <?= $hero->getDescriptionA() ?>
-                            </textarea>
+                            ></textarea>
                         </div>
                     </div>
                     <button type="submit" name="content_a">
@@ -147,9 +145,7 @@
                                 rows="5"
                                 cols="33"
                                 value="<?= $hero->getDescriptionB() ?>"
-                            >
-                            <?= $hero->getDescriptionB() ?>
-                            </textarea>
+                            ></textarea>
                         </div>
                     </div>
                     <button type="submit" name="content_b">

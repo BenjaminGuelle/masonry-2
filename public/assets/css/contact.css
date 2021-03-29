@@ -105,6 +105,21 @@ main .contact .contact-content .form-contact::after {
     border-radius: 5px;
 }
 
+main .contact .contact-content .form-contact textarea {
+    width: 80%;
+    height: 50px;
+    background-color: #E5E5E5;
+    padding: 10px;
+    margin: 20px auto;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #E55607;
+    box-shadow: 1px 3px 5px 0px rgba(113, 113, 113 );
+}
+
 main .contact .contact-content .form-contact input {
     width: 80%;
     height: 50px;
@@ -135,16 +150,23 @@ main .contact .contact-content .form-contact #message {
 main .contact .contact-content .form-contact button {
     width: 150px;
     height: 50px;
-    background-color: #E55607;
+    background-color: #F4F4F4;
     padding: 10px;
     margin: 20px auto;
     border-radius: 5px;
-    color: #F4F4F4;
+    color: #E55607;
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 0.1em;
     border: none;
     box-shadow: 1px 3px 5px 0px rgba(113, 113, 113 );
+    cursor: pointer;
+    outline: none;
+}
+
+main .contact .contact-content .form-contact button:hover {
+    color: #E5E5E5;
+    background-color: #E55607;
 }
 
 /* SCREEN TAB SMALL */

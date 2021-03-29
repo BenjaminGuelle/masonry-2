@@ -81,8 +81,7 @@
                     <h3>
                         <span>Description de section de la présentation :</span>
                     </h3>
-                    <textarea class="textarea" name="description" rows="5" cols="33" placeholder="Mon super titre" wrap="true">
-                    </textarea>
+                    <textarea class="textarea" name="description" rows="5" cols="33" placeholder="Mon super titre" wrap="true"></textarea>
                     <button type="submit" name="description_form">
                         Modifier
                     </button>

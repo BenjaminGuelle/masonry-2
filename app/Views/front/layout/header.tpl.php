@@ -12,7 +12,7 @@
     <meta property="og:title"
         content="SARL MICHEL Stéphane : maçonnerie, rénovation, construction.">
     <meta property="og:description"
-        content="Artisan MICHEL Stéphane : nous accompagnons nos clients dans la réalisations de leurs projets de maçonnerie, construction et rénovation de l'habitat.">
+        content="Maçon MICHEL Stéphane : nous accompagnons nos clients dans la réalisations de leurs projets de maçonnerie, construction et rénovation de l'habitat.">
     <meta property="og:url" content="https://maconnerie-michel-stephane.fr/">
     <meta property="og:site_name" content="Maçonnerie MICHEL Stéphane">
     <meta name="twitter:card" content="summary_large_image">

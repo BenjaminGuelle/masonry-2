@@ -31,5 +31,8 @@ body footer {
     height: 100vh;
 }
 
+textarea {
+    white-space: nowrap;
+}
 
 

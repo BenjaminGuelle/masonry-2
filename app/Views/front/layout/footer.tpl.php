@@ -24,7 +24,7 @@
                     <img src="public/assets/images/logoFooter/information.svg" alt="logo-infos">
                     <span>à propos</span>
                 </h3>
-                <a href="#">Accueil</a>
+                <a href="<?= $router->generate('/') ?>">Accueil</a>
                 <a href="#">Nous contacter</a>
                 <a href="#">Mentions légales</a>
                 <a href="#">Plan du site</a>

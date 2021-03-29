@@ -48,8 +48,7 @@
                         cols="33"
                         placeholder="Mon super titre"
                         wrap="true"
-                    >
-                    </textarea>
+                    ></textarea>
                     <button type="submit" name="description_form">
                         Modifier
                     </button>
