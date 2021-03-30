@@ -89,18 +89,18 @@ function buildMail(string $type):string
         try {
             if(sendMail($mail, $subject, buildMail($type)))
             {
-                $_SESSION['sendedMail'][$type] = 'Votre mail à bien était envoyé.';
+                $_SESSION['sendedMail'] = 'Votre mail à bien était envoyé.';
             }
             else
             {
-                $_SESSION['sendedMail'][$type] = 'Un problème est survenu à l\'envoit de votre mail, veuillez réessayer';
+                $_SESSION['sendedMail'] = 'Un problème est survenu à l\'envoit de votre mail, veuillez réessayer';
             }
             return true;
         }
         catch(\Exception $e) {
             logError('Error during sending mail');
             logError(json_encode($e));
-            $_SESSION['sendedMail'][$type] = 'Un problème est survenu à l\'envoit de votre mail, veuillez réessayer';
+            $_SESSION['sendedMail'] = 'Un problème est survenu à l\'envoit de votre mail, veuillez réessayer';
             return false;
         }
     }

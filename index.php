@@ -45,11 +45,12 @@ $router = new AltoRouter();
 $router->setBasePath( BASE_URI );
 
 // === PUBLIC === 
-$router->map('GET',  '/',                                   'HomeController::home',             'homepage'                  );
-$router->map('GET',  '/services',                           'ServicesController::list',         'services'                  );
-$router->map('GET',  '/presentation',                       'SocietyController::prez',          'presentation'              );
-$router->map('GET',  '/galerie',                            'GalleryController::list',          'gallery'                   );
-$router->map('POST', '/',                                   'ContactController::mangageMailContact',      'contact-post'              );
+$router->map('GET',  '/',                                   'HomeController::home',                         'homepage'                  );
+$router->map('GET',  '/services',                           'ServicesController::list_public',              'services'                  );
+$router->map('GET',  '/presentation',                       'PresentationController::list_public',          'presentation'              );
+$router->map('GET',  '/galerie',                            'GalleryController::list_public',               'gallery'                   );
+// Route Send mail
+$router->map('POST', '/',                                   'ContactController::mangageMailContact',        'contact-post'              );
 
 // === PRIVATE ===
 $router->map('GET',  '/Admin',                              'AdminController::admin',           'admin'                     );

@@ -124,12 +124,25 @@ header .nav-mobile {
     left: 0;
     width: 100%;
     height: 300px;
-    background-color: #E55607;
+    background-color: #F4F4F4;
     transition: top 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .nav-mobile a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #E55607;
+
 }
 
 header .nav-mobile.active {
-    top: 0;
+    top: 50px;
     transition: top 0.5s ease-in-out;
 }
 
@@ -180,6 +193,7 @@ header .up {
     
     /* view UP */
     header .up {
+        display: none;
         position: absolute;
         z-index: 10;
         bottom: -675px;
@@ -188,7 +202,6 @@ header .up {
         height: 60px;
         border-radius: 50%;
         border: 3px solid #E55607;
-        display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;

@@ -1,7 +1,9 @@
       <!-- section hero  -->
         <section id="hero" class="hero container">
             <div class="background-hero">
-                <img src="<?= getPublicAssets('/images/home/house.jpg') ?>" alt="background">
+                <?php foreach ($heros as $hero): ?>
+                <img src="<?= getPublicAssets('images/home/'.$hero->getPicture()) ?>" alt="background">
+                <?php endforeach; ?>
             </div>
             <div class="hero-content">
                 <?php foreach ($heros as $hero): ?>
@@ -104,7 +106,9 @@
         <section class="prez container">
             <div class="prez-content">
                 <div class="prez-top">
-                    <img src="<?= getPublicAssets('/images/home/worker.jpg') ?>" alt="photo Stéphane Michel">
+                <?php foreach ($presentation as $item) :?>
+                    <img src="<?= getPublicAssets('images/home/'.$item->getPicture()) ?>" alt="photo Stéphane Michel">
+                <?php endforeach; ?>
                 </div>
                 <div class="prez-bot">
                 <?php foreach ($presentation as $item) :?>
@@ -142,7 +146,7 @@
                                 <?= $item->getDescription() ?>
                             </span>
                         </div>
-                        <a href="<?= $router->generate( 'presentation' ) ?>" class="link-prez">
+                        <a href="<?= $router->generate( 'presentation' ) ?>" class="link-prez" title="plus de détails sur notre entreprise">
                             Découvrez nous
                         </a>
                     </div>
@@ -252,14 +256,11 @@
                     <button type="submit">
                         Envoyer
                     </button>
-                    <span styles="color:red">
-                    <?php 
-                        if (isset($_SESSION['sendedMail']))
-                        {
-                            return $_SESSION['sendedMail'];
-                        }
-                    ?>
+                    <?php if (isset($_SESSION['sendedMail'])) : ?>
+                    <span class="back-sended_mail">
+                    <?= $_SESSION['sendedMail'] ?>
                     </span>
+                    <?php endif; ?>
                 </form>
             </div>
         </section>

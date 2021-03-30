@@ -169,6 +169,16 @@ main .contact .contact-content .form-contact button:hover {
     background-color: #E55607;
 }
 
+main .contact .contact-content .form-contact .back-sended_mail {
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    color: #E55607;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* SCREEN TAB SMALL */
 @media screen and (min-width: 768px) {}
 

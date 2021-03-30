@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="<?= getPublicCss('hero') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('services') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('presentation') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('presentation_view') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('gallery') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
