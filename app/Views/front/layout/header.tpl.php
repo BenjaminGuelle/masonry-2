@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('errors') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('legal') ?> ">
 
 </head>
 <body>

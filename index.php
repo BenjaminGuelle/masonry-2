@@ -49,6 +49,7 @@ $router->map('GET',  '/',                                   'HomeController::hom
 $router->map('GET',  '/services',                           'ServicesController::list_public',              'services'                  );
 $router->map('GET',  '/presentation',                       'PresentationController::list_public',          'presentation'              );
 $router->map('GET',  '/galerie',                            'GalleryController::list_public',               'gallery'                   );
+$router->map('GET',  '/mentions-legales',                   'LegalNoticeController::list_public',           'legal-notice'              );
 // Route Send mail
 $router->map('POST', '/',                                   'ContactController::mangageMailContact',        'contact-post'              );
 

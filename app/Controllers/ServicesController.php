@@ -15,5 +15,10 @@ class ServicesController extends CoreController
         $this->showAdmin( 'pages/services', $datas );
     }
 
+    public function list_public() 
+    {
+        $this->show( 'pages/services' );
+    }
+
     
 }
