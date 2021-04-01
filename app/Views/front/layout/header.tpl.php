@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="<?= getPublicCss('presentation_view') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('gallery') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('contactUs') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('errors') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('legal') ?> ">
@@ -79,7 +80,7 @@
                 <a href="<?= $router->generate( 'presentation' ) ?>">Nous découvrir</a>
                 <a href="<?= $router->generate( 'gallery' ) ?>">Galerie</a>
             </nav>
-            <a href="#contact" class="contact-us">
+            <a href="<?= $router->generate( 'contact' ) ?>" class="contact-us">
                 Contact
             </a>
         </div>
@@ -88,6 +89,7 @@
             <a href="<?= $router->generate( 'services' ) ?>">Nos Services</a>
             <a href="<?= $router->generate( 'presentation' ) ?>">Nous découvrir</a>
             <a href="<?= $router->generate( 'gallery' ) ?>">Galerie</a>
+            <a href="<?= $router->generate( 'contact' ) ?>">Contact</a>
         </div>
         <a href="tel:0641796665" class="phonefaster">
             <img src="public/assets/images/logoContact/tel.png" alt="phone">

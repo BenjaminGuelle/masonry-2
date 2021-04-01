@@ -25,7 +25,7 @@
                     <span>à propos</span>
                 </h3>
                 <a href="<?= $router->generate('homepage') ?>">Accueil</a>
-                <a href="#">Nous contacter</a>
+                <a href="<?= $router->generate( 'contact' ) ?>">Nous contacter</a>
                 <a href="<?= $router->generate('legal-notice') ?>">Mentions légales</a>
                 <a href="#">Plan du site</a>
             </div>

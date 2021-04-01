@@ -16,6 +16,11 @@ class ContactController extends CoreController
     
         $this->showAdmin( 'pages/contact', $datas );
     }
+
+    public function list_public() 
+    {
+        $this->show( 'pages/contact');
+    }
     
     public function edit($_id)
     {

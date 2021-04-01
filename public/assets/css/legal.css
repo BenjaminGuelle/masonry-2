@@ -43,6 +43,17 @@ main .legal .content .infos span {
     font-weight: 200;
 }
 
+main .legal .content .infos a {
+    font-size: 1;
+    font-weight: 700;
+    text-decoration: none;
+    color: #717171;
+}
+
+main .legal .content .infos a:hover {
+    color: #E55607;
+}
+
 
 @media screen and (min-width: 768px) {}
 @media screen and (min-width: 1024px) and (min-height: 1266px) {}
