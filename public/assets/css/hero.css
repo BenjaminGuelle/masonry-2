@@ -80,6 +80,10 @@ main .hero .hero-content .hero-box h3, .hero-text {
 }
 
 main .hero .hero-content .hero-box .link-hero {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
     text-decoration: none;
     font-size: 1em;
     font-weight: 700;
@@ -89,11 +93,40 @@ main .hero .hero-content .hero-box .link-hero {
     border-radius: 5px;
     margin-top: 10px;
     box-shadow: 1px 3px 5px 0px rgba(113, 113, 113 );
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 main .hero .hero-content .hero-box .link-hero:hover {
     background-color: #717171;
-    color: #E55607;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translate(-50%, 0);
+		-ms-transform:     translate(-50%, 0);
+		transform:         translate(-50%, 0);
+	}
+	40% {
+		-webkit-transform: translate(-50%,-30px);
+		-ms-transform:     translate(-50%, -30px);
+		transform:         translate(-50%, -30px);
+	}
+	60% {
+		-webkit-transform: translate(-50%, -15px);
+		-ms-transform:     translate(-50%, -15px);
+		transform:         translate(-50%, -15px);
+	}
 }
 
 /* SCREEN TAB SMALL */

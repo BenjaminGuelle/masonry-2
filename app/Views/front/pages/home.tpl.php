@@ -23,7 +23,7 @@
                         <div class="hero-text">
                             <?= $hero->getDescriptionB() ?>
                         </div>
-                        <a href="#contact" class="link-hero">
+                        <a href="<?= $router->generate( 'contact' ) ?>" class="link-hero">
                             Demandez un devis
                         </a>
                     </div>
@@ -63,7 +63,7 @@
                             <div class="card-title">
                                 <h3>Réalisation</h3>
                                 <div class="card-logo">
-                                    <img src="public/assets/images/logoCards/brickwall.svg" alt="logo Construction">
+                                    <img src="<?= getPublicAssets('images/logoCards/brickwall.svg') ?>" alt="logo Construction">
                                 </div>
                             </div>
                             <div class="card-content">
@@ -163,47 +163,47 @@
                   <div id="slides" class="slides">
                     <span class="slide">
                         Slide 1
-                        <img src="public/assets/images/slides/img1.jpg" alt="photo1">
+                        <img src="<?= getPublicAssets('images/bankPicture/img1.webp') ?>" alt="photo1">
                     </span>
                     <span class="slide">
                         Slide 2
-                        <img src="public/assets/images/slides/img2.jpg" alt="photo2">
+                        <img src="<?= getPublicAssets('images/bankPicture/img2.webp') ?>" alt="photo2">
                     </span>
                     <span class="slide">
                         Slide 3
-                        <img src="public/assets/images/slides/img3.jpg" alt="photo3">
+                        <img src="<?= getPublicAssets('images/bankPicture/img3.webp') ?>" alt="photo3">
                     </span>
                     <span class="slide">
                         Slide 4
-                        <img src="public/assets/images/slides/img4.jpg" alt="photo4">
+                        <img src="<?= getPublicAssets('images/bankPicture/img4.webp') ?>" alt="photo4">
                     </span>
                     <span class="slide">
                         Slide 5
-                        <img src="public/assets/images/slides/img5.jpg" alt="photo5">
+                        <img src="<?= getPublicAssets('images/bankPicture/img5.webp') ?>" alt="photo5">
                     </span>
                     <span class="slide">
                         Slide 6
-                        <img src="public/assets/images/slides/img6.jpg" alt="photo6">
+                        <img src="<?= getPublicAssets('images/bankPicture/img6.webp') ?>" alt="photo6">
                     </span>
                     <span class="slide">
                         Slide 7
-                        <img src="public/assets/images/slides/img7.jpg" alt="photo7">
+                        <img src="<?= getPublicAssets('images/bankPicture/img7.webp') ?>" alt="photo7">
                     </span>
                     <span class="slide">
                         Slide 8
-                        <img src="public/assets/images/slides/img8.jpg" alt="photo8">
+                        <img src="<?= getPublicAssets('images/bankPicture/img8.webp') ?>" alt="photo8">
                     </span>
                     <span class="slide">
                         Slide 9
-                        <img src="public/assets/images/slides/img9.jpg" alt="photo9">
+                        <img src="<?= getPublicAssets('images/bankPicture/img9.webp') ?>" alt="photo9">
                     </span>
                     <span class="slide">
                         Slide 10
-                        <img src="public/assets/images/slides/img10.jpg" alt="photo10">
+                        <img src="<?= getPublicAssets('images/bankPicture/img10.webp') ?>" alt="photo10">
                     </span>
                     <span class="slide">
                         Slide 11
-                        <img src="public/assets/images/slides/img11.jpg" alt="photo11">
+                        <img src="<?= getPublicAssets('images/bankPicture/img11.webp') ?>" alt="photo11">
                     </span>
                   </div>
                 </div>

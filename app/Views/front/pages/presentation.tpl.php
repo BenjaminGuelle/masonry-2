@@ -11,13 +11,13 @@
                     Depuis 2010, notre métier est d'accompagner nos clients, de comprendre leurs projets de réalisation et d'identifier leurs besoins.
                 </p><br>
                 <p class="text">
-                    Spécialisé dans le bâtiment depuis plus de 30 ans, dans le gros oeuvre comme la rénovation, nous garantissons le bon déroulement de vos projets.
+                    Spécialisés dans le bâtiment depuis plus de 30 ans, dans le gros oeuvre comme la rénovation, nous garantissons le bon déroulement de vos projets.
                 </p><br>
                 <p class="text">
-                    Fort de notre expérience, nous assurons un diagnostic professionnel et précis pour vous projeter au mieux dans vos projets. Nous saurons également vous guider et vous apporter les conseils dont vous avez besoins.
+                    Fort de notre expérience, nous assurons un diagnostic professionnel et précis pour vous projeter au mieux dans vos projets. Nous saurons également vous guider et vous apporter les conseils dont vous avez besoin.
                 </p><br>
                 <p class="text">
-                    Nos méthodes de travail proféssionelles et exigentent vous garantissent un travail artisanal de qualité et un chantier toujours propre.
+                    Nos méthodes de travail proféssionelles et exigeantes, vous garantissent un travail artisanal de qualité et un chantier toujours propre.
                 </p>
             </div>
         </article>
@@ -34,7 +34,7 @@
                     Notre expérience se transmet de père en fils depuis 7 générations jusqu'à aujourd'hui avec Stéphane MICHEL et son fils Pierre MICHEL.
                 </p><br>
                 <p class="text">
-                    Une équipe exemplaire aux méthodes traditionnelles, nous mettons un point d'honneur à réaliser vos projets jusqu'à atteindre la perfection de leurs réalisations.
+                    Une équipe exemplaire aux méthodes traditionnelles, nous mettons un point d'honneur à réaliser vos projets jusqu'à atteindre la perfection de leur réalisation.
                 </p><br>   
             </div>
         </article>
@@ -57,7 +57,7 @@
         <!-- Pierre Michel -->
         <div class="worker">
             <div class="worker-img">
-                <img src="<?= getPublicAssets('images/presentation/man.jpg') ?>" alt="Michel Stéphane">
+                <img src="<?= getPublicAssets('images/presentation/pierre.webp') ?>" alt="Michel Stéphane">
             </div>
             <div class="worker-description">
                 <h3>
@@ -94,7 +94,7 @@
             <a href="tel:0641796665" class="btn-contact">
                 <img src="<?= getPublicAssets('images/logoContact/tel.png') ?>" alt="téléphone">
             </a>
-            <a href="#" class="btn-contact">
+            <a href="mailto:sarl.michel.stephane@gmail.com" class="btn-contact">
                 <img src="<?= getPublicAssets('images/logoContact/letter.png') ?>" alt="mail">
             </a>
         </div>

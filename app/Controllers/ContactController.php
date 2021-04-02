@@ -60,6 +60,7 @@ class ContactController extends CoreController
     public function mangageMailContact()
     {
         $mailPro = 'sarl.michel.stephane@gmail.com';
+        // mail test :
         // $mailPro = 'benjamin.guelle@gmail.com';
         $mailClient = $_POST['email'];
         // mail to customer =>

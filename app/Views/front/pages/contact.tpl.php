@@ -11,15 +11,15 @@
             <a href="tel:0641796665">06 41 79 66 65</a>
             <a href="mailto:sarl.michel.stephane@gmail.com">sarl.michel.stephane@gmail.com</a>
         </div>
-        <form action="" method="post" class="contactUs-form">
+        <form action="<?= $router->generate('contactUs-post') ?>" method="post" class="contactUs-form">
             <label for="name" required>
                 Vos nom et prénoms
             </label>
             <input type="text" name="name" required>
-            <label for="mail">
+            <label for="email">
                 Votre email
             </label>
-            <input type="mail" name="mail" placeholder="mon_email@exemple.com" required>
+            <input type="email" name="email" placeholder="mon_email@exemple.com" required>
             <label for="tel">
                 Votre numéro de contact
             </label>

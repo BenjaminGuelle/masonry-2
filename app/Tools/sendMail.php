@@ -89,11 +89,11 @@ function buildMail(string $type):string
         try {
             if(sendMail($mail, $subject, buildMail($type)))
             {
-                $_SESSION['sendedMail'] = 'Votre mail à bien était envoyé.';
+                $_SESSION['sendedMail'] = 'Votre message a bien été envoyé.';
             }
             else
             {
-                $_SESSION['sendedMail'] = 'Un problème est survenu à l\'envoit de votre mail, veuillez réessayer';
+                $_SESSION['sendedMail'] = 'Un problème est survenu à l\'envoit de votre message, veuillez réessayer';
             }
             return true;
         }

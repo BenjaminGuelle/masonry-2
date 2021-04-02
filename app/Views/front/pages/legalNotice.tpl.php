@@ -11,16 +11,17 @@
             <span>Ce site est édité par :</span>
             <span>SARL Dialekto</span>
             <span>SIRET : 85277946100015</span>
-            <span>Capital social : 10,00€</span>
-            <span>Adresse du siège social : 11 square de la fontaine venoise - 14000 Caen</span>
+            <span>Adresse du siège social : 11 square de la Fontaine Venoise - 14000 Caen</span>
         </div>
         <div class="Crédits infos">
             <h3>Crédits</h3>
             <span>Intégration HTML CSS, JavaScript :</span>
             <span>Développement du site et du back-office PHP (MVC) :</span>
             <span>Conception de la Charte graphique globale, de l'ergonomie du site et du back-office :</span>
-            <h4>BENJAMIN GUELLE</h4>
-            <a href="https://www.linkedin.com/in/benjamin-guelle/">contact</a>
+            <a href="https://www.linkedin.com/in/benjamin-guelle/">
+                <h4>BENJAMIN GUELLE</h4>
+            </a>
+            <a href="mailto:benjamin.guelle@gmail.com">Contact mail</a>
         </div>
         <div class="Hébergement infos">
             <h3>Hébergement</h3>

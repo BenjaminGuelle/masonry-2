@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="<?= getPublicCss('presentation') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('presentation_view') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('gallery') ?> ">
+    <link rel="stylesheet" href="<?= getPublicCss('slide') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('contact') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('contactUs') ?> ">
     <link rel="stylesheet" href="<?= getPublicCss('footer') ?> ">
@@ -92,10 +93,10 @@
             <a href="<?= $router->generate( 'contact' ) ?>">Contact</a>
         </div>
         <a href="tel:0641796665" class="phonefaster">
-            <img src="public/assets/images/logoContact/tel.png" alt="phone">
+            <img src="<?= getPublicAssets('images/logoContact/tel.png') ?>" alt="phone">
         </a>
         <div class="up">
-            <img src="public/assets/images/up-arrow.svg" alt="up">
+            <img src="<?= getPublicAssets('images/up-arrow.svg') ?>" alt="up">
         </div>
     </header>
 

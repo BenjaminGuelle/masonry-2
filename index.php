@@ -51,6 +51,7 @@ $router->map('GET',  '/presentation',                       'PresentationControl
 $router->map('GET',  '/galerie',                            'GalleryController::list_public',               'gallery'                   );
 $router->map('GET',  '/mentions-legales',                   'LegalNoticeController::list_public',           'legal-notice'              );
 $router->map('GET',  '/contact',                            'ContactController::list_public',               'contact'                   );
+$router->map('POST', '/contact',                            'ContactController::mangageMailContact',        'contactUs-post'            );
 // Route Send mail
 $router->map('POST', '/',                                   'ContactController::mangageMailContact',        'contact-post'              );
 

@@ -42,8 +42,7 @@ class Users extends CoreModel
         }
         catch(\Exception $error) {
             logError(print_r($error));
-        }
-        
+        }    
     }
 
     //===============================
